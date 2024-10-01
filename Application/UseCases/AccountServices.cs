@@ -11,16 +11,19 @@ namespace Application.UseCases
     public class AccountServices : IAccountServices
     {
         private readonly IAccountCommand _accountCommand;
+        private readonly IAccountQuery _accountQuery;
         private readonly IAccountTypeServices _accountTypeServices;
         private readonly ITypeCurrencyServices _typeCurrencyServices;
         private readonly IStateAccountServices _stateAccountServices;
 
         public AccountServices(IAccountCommand accountCommand,
+            IAccountQuery accountQuery,
             IAccountTypeServices accountTypeServices,
             ITypeCurrencyServices typeCurrencyServices,
             IStateAccountServices stateAccountServices)
         {
             _accountCommand = accountCommand;
+            _accountQuery = accountQuery;
             _accountTypeServices = accountTypeServices;
             _typeCurrencyServices = typeCurrencyServices;
             _stateAccountServices = stateAccountServices;
@@ -28,11 +31,11 @@ namespace Application.UseCases
 
         public async Task<AccountResponse> CreateAccount(AccountCreateRequest accountRequest)
         {
-            string accountNumber = GenerateAccountNumber();
+            string accountNumber = await GenerateAccountNumber();
 
-            string cbu = GenerateCBU();
+            string cbu = await GenerateCBU();
 
-            string alias = GenerateAlias();
+            string alias = await GenerateAlias();
 
             var account = new AccountModel
             {
@@ -63,25 +66,46 @@ namespace Application.UseCases
             return response;
         }
 
-        public string GenerateAccountNumber()
+        public async Task<string> GenerateAccountNumber()
         {
+            var random = new Random();
             // Suponiendo que 4748 es el código de nuestra wallet.
             string bankCode = "4748";
-            string sequentialNumber = new Random().Next(10000000, 99999999).ToString();
-            return $"{bankCode}-{sequentialNumber}";
+            string sequentialNumber = random.Next(10000000, 99999999).ToString();
+
+            string accountNumber = $"{bankCode}-{sequentialNumber}";
+
+            // Verifica que el número de cuenta sea único.
+            while (!await _accountQuery.IsAccountNumberUnique(accountNumber))
+            {
+                sequentialNumber = random.Next(10000000, 99999999).ToString();
+                accountNumber = $"{bankCode}-{sequentialNumber}";
+            }
+
+            return accountNumber;
         }
 
-        public string GenerateCBU()
+        public async Task<string> GenerateCBU()
         {
+            var random = new Random();
+
             // Suponiendo que 28505909 es el código bancario para transferencias de nuestra wallet.
             string bankCode = "28505909";
-            var random = new Random();
             string randomSequence = random.Next(100000000, 999999999).ToString() + random.Next(10000, 99999).ToString();
 
-            return $"{bankCode}{randomSequence}";
+            string cbu = $"{bankCode}{randomSequence}";
+
+            // Verifica que el CBU sea único.
+            while (!await _accountQuery.IsCbuUnique(cbu))
+            {
+                randomSequence = random.Next(100000000, 999999999).ToString() + random.Next(10000, 99999).ToString();
+                cbu = $"{bankCode}{randomSequence}";
+            }
+
+            return cbu;
         }
 
-        public string GenerateAlias()
+        public async Task<string> GenerateAlias()
         {
             var words = new List<string>
             {
@@ -95,10 +119,20 @@ namespace Application.UseCases
             string word1 = words[random.Next(words.Count)];
             string word2 = words[random.Next(words.Count)];
             string word3 = words[random.Next(words.Count)];
-             
-            //podria agregarse una validacion para asegurar el alias es unico
 
-            return $"{word1}.{word2}.{word3}";
+            string alias = $"{word1}.{word2}.{word3}";
+
+            //Verifica que el alias sea único.
+            while (!await _accountQuery.IsAliasUnique(alias))
+            {
+                word1 = words[random.Next(words.Count)];
+                word2 = words[random.Next(words.Count)];
+                word3 = words[random.Next(words.Count)];
+
+                alias = $"{word1}.{word2}.{word3}";
+            }
+
+            return alias;
         }
 
         public Task DisableAccount(Guid id)

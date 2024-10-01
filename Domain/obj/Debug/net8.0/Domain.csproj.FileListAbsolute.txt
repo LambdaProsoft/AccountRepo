@@ -9,3 +9,15 @@ C:\Users\diego\source\repos\Account.API\Domain\obj\Debug\net8.0\Domain.dll
 C:\Users\diego\source\repos\Account.API\Domain\obj\Debug\net8.0\refint\Domain.dll
 C:\Users\diego\source\repos\Account.API\Domain\obj\Debug\net8.0\Domain.pdb
 C:\Users\diego\source\repos\Account.API\Domain\obj\Debug\net8.0\ref\Domain.dll
+C:\Users\gonza\Desktop\PS- Proyecto\SRC\VirtualWallet-preview\AccountRepo\Domain\bin\Debug\net8.0\Domain.deps.json
+C:\Users\gonza\Desktop\PS- Proyecto\SRC\VirtualWallet-preview\AccountRepo\Domain\bin\Debug\net8.0\Domain.dll
+C:\Users\gonza\Desktop\PS- Proyecto\SRC\VirtualWallet-preview\AccountRepo\Domain\bin\Debug\net8.0\Domain.pdb
+C:\Users\gonza\Desktop\PS- Proyecto\SRC\VirtualWallet-preview\AccountRepo\Domain\obj\Debug\net8.0\Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\gonza\Desktop\PS- Proyecto\SRC\VirtualWallet-preview\AccountRepo\Domain\obj\Debug\net8.0\Domain.AssemblyInfoInputs.cache
+C:\Users\gonza\Desktop\PS- Proyecto\SRC\VirtualWallet-preview\AccountRepo\Domain\obj\Debug\net8.0\Domain.AssemblyInfo.cs
+C:\Users\gonza\Desktop\PS- Proyecto\SRC\VirtualWallet-preview\AccountRepo\Domain\obj\Debug\net8.0\Domain.csproj.CoreCompileInputs.cache
+C:\Users\gonza\Desktop\PS- Proyecto\SRC\VirtualWallet-preview\AccountRepo\Domain\obj\Debug\net8.0\Domain.sourcelink.json
+C:\Users\gonza\Desktop\PS- Proyecto\SRC\VirtualWallet-preview\AccountRepo\Domain\obj\Debug\net8.0\Domain.dll
+C:\Users\gonza\Desktop\PS- Proyecto\SRC\VirtualWallet-preview\AccountRepo\Domain\obj\Debug\net8.0\refint\Domain.dll
+C:\Users\gonza\Desktop\PS- Proyecto\SRC\VirtualWallet-preview\AccountRepo\Domain\obj\Debug\net8.0\Domain.pdb
+C:\Users\gonza\Desktop\PS- Proyecto\SRC\VirtualWallet-preview\AccountRepo\Domain\obj\Debug\net8.0\ref\Domain.dll
