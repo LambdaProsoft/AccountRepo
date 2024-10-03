@@ -13,9 +13,11 @@ namespace AccountInfrastructure.Query
         {
             _context = context;
         }
-        public Task<AccountModel> GetAccount(Guid accountId)
+        public Task<AccountModel> GetAccountById(Guid accountId)
         {
-            throw new NotImplementedException();
+            var account = _context.Account
+                .FirstOrDefaultAsync(x => x.AccountId == accountId);
+            return account;
         }
 
         public async Task<bool> IsAccountNumberUnique(string accountNumber)
@@ -35,5 +37,6 @@ namespace AccountInfrastructure.Query
             return !await _context.Account
                 .AnyAsync(a => a.Alias == alias);
         }
+
     }
 }

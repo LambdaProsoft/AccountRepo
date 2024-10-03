@@ -18,9 +18,10 @@ namespace Infrastructure.Command
             await _context.SaveChangesAsync();
         }
 
-        public Task UpdateAccount(AccountModel account)
+        public async Task UpdateAccount(AccountModel account)
         {
-            throw new NotImplementedException();
+            _context.Account.Update(account);
+            await _context.SaveChangesAsync();
         }
     }
 }

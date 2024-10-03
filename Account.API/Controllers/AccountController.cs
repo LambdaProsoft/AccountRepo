@@ -43,31 +43,65 @@ namespace Account.API.Controllers
             }
         }
 
-        ///// <summary>
-        ///// Obtiene una cuenta por su ID
-        ///// </summary>
-        ///// <param name="id">El ID de la cuenta</param>
-        ///// <returns>La información de la cuenta solicitada</returns>
-        //[HttpGet("{id:guid}")]
-        //[ProducesResponseType(typeof(AccountResponse), 200)]
-        //[ProducesResponseType(404)]
-        //public async Task<IActionResult> GetAccountById(Guid id)
-        //{
-        //    try
-        //    {
-        //        var accountResponse = await _accountServices.GetById(id);
+        /// <summary>
+        /// Obtiene una cuenta por su ID
+        /// </summary>
+        /// <param name="id">El ID de la cuenta</param>
+        /// <returns>La información de la cuenta solicitada, junto con el usuario y transferencias</returns>
+        [HttpGet("{id:guid}")]
+        [ProducesResponseType(typeof(AccountDetailsResponse), 200)]
+        [ProducesResponseType(404)]
+        public async Task<IActionResult> GetAccountById(Guid id)
+        {
+            try
+            {
+                var accountResponse = await _accountServices.GetById(id);
 
-        //        if (accountResponse == null)
-        //        {
-        //            return NotFound();
-        //        }
+                if (accountResponse == null)
+                {
+                    return NotFound();
+                }
 
-        //        return Ok(accountResponse);
-        //    }
-        //    catch (Exception ex)
-        //    {
-        //        return StatusCode(500, new { Message = ex.Message });
-        //    }
-        //}
+                return Ok(accountResponse);
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(500, new { Message = ex.Message });
+            }
+        }
+
+
+        /// <summary>
+        /// Actualiza una cuenta por su Id y datos ingresados
+        /// </summary>
+        /// <param name="accountId">El ID de la cuenta</param>
+        /// /// <param name="accountRequest">Objeto de solicitud que contiene la información para actualizar una cuenta</param>
+        /// <returns>La cuenta con los datos modificados</returns>
+        [HttpPut]
+        [ProducesResponseType(typeof(AccountResponse), 200)]
+        [ProducesResponseType(400)]
+        public async Task<IActionResult> UpdateAccount(Guid accountId, AccountUpdateRequest accountRequest)
+        {
+            if (!ModelState.IsValid)
+            {
+                return BadRequest(ModelState);
+            }
+
+            try
+            {
+                var result = await _accountServices.UpdateAccount(accountId, accountRequest);
+                
+                if (result == null)
+                {
+                    return NotFound();
+                }
+                return Ok(result);
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(500, new { Message = ex.Message });
+            }
+
+        }
     }
 }

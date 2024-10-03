@@ -1,24 +1,7 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "C:\\Users\\gonza\\Desktop\\PS- Proyecto\\SRC\\VirtualWallet-preview\\AccountRepo\\",
-  "Documents": [
-    {
-      "AbsoluteMoniker": "D:0:0:{0DFB1ED5-EAEC-4232-B7C6-27304EF84642}|Account.API\\Account.API.csproj|c:\\users\\gonza\\desktop\\ps- proyecto\\src\\virtualwallet-preview\\accountrepo\\account.api\\appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{0DFB1ED5-EAEC-4232-B7C6-27304EF84642}|Account.API\\Account.API.csproj|solutionrelative:account.api\\appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6FF7F13C-AA05-4F74-B0A2-74403D87FF3F}|Infrastructure\\Infrastructure.csproj|c:\\users\\gonza\\desktop\\ps- proyecto\\src\\virtualwallet-preview\\accountrepo\\infrastructure\\query\\accountquery.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6FF7F13C-AA05-4F74-B0A2-74403D87FF3F}|Infrastructure\\Infrastructure.csproj|solutionrelative:infrastructure\\query\\accountquery.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{79456C55-45BE-49C4-819B-D1FC137242EE}|Application\\Application.csproj|c:\\users\\gonza\\desktop\\ps- proyecto\\src\\virtualwallet-preview\\accountrepo\\application\\interfaces\\iaccountmodel\\iaccountquery.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{79456C55-45BE-49C4-819B-D1FC137242EE}|Application\\Application.csproj|solutionrelative:application\\interfaces\\iaccountmodel\\iaccountquery.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{79456C55-45BE-49C4-819B-D1FC137242EE}|Application\\Application.csproj|c:\\users\\gonza\\desktop\\ps- proyecto\\src\\virtualwallet-preview\\accountrepo\\application\\usecases\\accountservices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{79456C55-45BE-49C4-819B-D1FC137242EE}|Application\\Application.csproj|solutionrelative:application\\usecases\\accountservices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    }
-  ],
+  "Documents": [],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
@@ -26,7 +9,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": -1,
           "Children": [
             {
               "$type": "Bookmark",
@@ -43,58 +26,6 @@
             {
               "$type": "Bookmark",
               "Name": "ST:130:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "appsettings.Development.json",
-              "DocumentMoniker": "C:\\Users\\gonza\\Desktop\\PS- Proyecto\\SRC\\VirtualWallet-preview\\AccountRepo\\Account.API\\appsettings.Development.json",
-              "RelativeDocumentMoniker": "Account.API\\appsettings.Development.json",
-              "ToolTip": "C:\\Users\\gonza\\Desktop\\PS- Proyecto\\SRC\\VirtualWallet-preview\\AccountRepo\\Account.API\\appsettings.Development.json",
-              "RelativeToolTip": "Account.API\\appsettings.Development.json",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAAnAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2024-10-01T20:19:36.882Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "IAccountQuery.cs",
-              "DocumentMoniker": "C:\\Users\\gonza\\Desktop\\PS- Proyecto\\SRC\\VirtualWallet-preview\\AccountRepo\\Application\\Interfaces\\IAccountModel\\IAccountQuery.cs",
-              "RelativeDocumentMoniker": "Application\\Interfaces\\IAccountModel\\IAccountQuery.cs",
-              "ToolTip": "C:\\Users\\gonza\\Desktop\\PS- Proyecto\\SRC\\VirtualWallet-preview\\AccountRepo\\Application\\Interfaces\\IAccountModel\\IAccountQuery.cs",
-              "RelativeToolTip": "Application\\Interfaces\\IAccountModel\\IAccountQuery.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAAvAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-01T20:17:48.87Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "AccountServices.cs",
-              "DocumentMoniker": "C:\\Users\\gonza\\Desktop\\PS- Proyecto\\SRC\\VirtualWallet-preview\\AccountRepo\\Application\\UseCases\\AccountServices.cs",
-              "RelativeDocumentMoniker": "Application\\UseCases\\AccountServices.cs",
-              "ToolTip": "C:\\Users\\gonza\\Desktop\\PS- Proyecto\\SRC\\VirtualWallet-preview\\AccountRepo\\Application\\UseCases\\AccountServices.cs",
-              "RelativeToolTip": "Application\\UseCases\\AccountServices.cs",
-              "ViewState": "AQIAAIoAAAAAAAAAAAAAwIcAAAAJAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-01T20:14:57.873Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "AccountQuery.cs",
-              "DocumentMoniker": "C:\\Users\\gonza\\Desktop\\PS- Proyecto\\SRC\\VirtualWallet-preview\\AccountRepo\\Infrastructure\\Query\\AccountQuery.cs",
-              "RelativeDocumentMoniker": "Infrastructure\\Query\\AccountQuery.cs",
-              "ToolTip": "C:\\Users\\gonza\\Desktop\\PS- Proyecto\\SRC\\VirtualWallet-preview\\AccountRepo\\Infrastructure\\Query\\AccountQuery.cs",
-              "RelativeToolTip": "Infrastructure\\Query\\AccountQuery.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAACQAAAAJAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-01T20:12:21.096Z",
-              "EditorCaption": ""
             }
           ]
         }
