@@ -6,5 +6,6 @@ namespace Application.Interfaces.IAccountModel
     {
         Task InsertAccount(AccountModel account);
         Task UpdateAccount(AccountModel account);
+        Task UpdateBalance(Guid accountid, decimal balance);
     }
 }

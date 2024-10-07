@@ -1,6 +1,7 @@
 ﻿using Account.API.Infrastructure;
 using Application.Interfaces.IAccountModel;
 using Domain.Models;
+using Microsoft.EntityFrameworkCore;
 
 namespace Infrastructure.Command
 {
@@ -23,5 +24,14 @@ namespace Infrastructure.Command
             _context.Account.Update(account);
             await _context.SaveChangesAsync();
         }
+
+        public async Task UpdateBalance(Guid accountid, decimal balance)
+        {
+            var account = await _context.Account
+                .FirstOrDefaultAsync(p => p.AccountId == accountid);
+            account.Balance += balance;
+            _context.Update(account);
+            await _context.SaveChangesAsync();
+        } 
     }
 }

@@ -37,6 +37,5 @@ namespace AccountInfrastructure.Query
             return !await _context.Account
                 .AnyAsync(a => a.Alias == alias);
         }
-
     }
 }

@@ -9,5 +9,6 @@ namespace Application.Interfaces.IAccountModel
         Task<AccountDetailsResponse> GetById(Guid id);
         Task<AccountResponse> UpdateAccount(Guid id, AccountUpdateRequest accountRequest);
         Task DisableAccount(Guid id);
+        Task<bool> UpdateBalance(Guid id, AccountBalanceRequest balance);
     }
 }

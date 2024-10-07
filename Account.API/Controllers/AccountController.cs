@@ -1,6 +1,7 @@
 ﻿using Application.Interfaces.IAccountModel;
 using Application.Request;
 using Application.Response;
+using Microsoft.AspNetCore.Http.HttpResults;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Account.API.Controllers
@@ -48,7 +49,7 @@ namespace Account.API.Controllers
         /// </summary>
         /// <param name="id">El ID de la cuenta</param>
         /// <returns>La información de la cuenta solicitada, junto con el usuario y transferencias</returns>
-        [HttpGet("{id:guid}")]
+        [HttpGet]
         [ProducesResponseType(typeof(AccountDetailsResponse), 200)]
         [ProducesResponseType(404)]
         public async Task<IActionResult> GetAccountById(Guid id)
@@ -77,7 +78,7 @@ namespace Account.API.Controllers
         /// <param name="accountId">El ID de la cuenta</param>
         /// /// <param name="accountRequest">Objeto de solicitud que contiene la información para actualizar una cuenta</param>
         /// <returns>La cuenta con los datos modificados</returns>
-        [HttpPut]
+        [HttpPut("{id:guid}")]
         [ProducesResponseType(typeof(AccountResponse), 200)]
         [ProducesResponseType(400)]
         public async Task<IActionResult> UpdateAccount(Guid accountId, AccountUpdateRequest accountRequest)
@@ -96,6 +97,31 @@ namespace Account.API.Controllers
                     return NotFound();
                 }
                 return Ok(result);
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(500, new { Message = ex.Message });
+            }
+
+        }
+        [HttpPut]
+        [ProducesResponseType(200)]
+        [ProducesResponseType(404)]
+        public async Task<IActionResult> UpdateBalancee(Guid accountId, AccountBalanceRequest balance)
+        {
+            if (!ModelState.IsValid)
+            {
+                return BadRequest(ModelState);
+            }
+
+            try
+            {
+                bool result = await _accountServices.UpdateBalance(accountId, balance);
+                if (!result)
+                {
+                    return NotFound();
+                }
+                return Ok();
             }
             catch (Exception ex)
             {

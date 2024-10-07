@@ -12,6 +12,7 @@ using Application.UseCases;
 using Infrastructure.Command;
 using Microsoft.EntityFrameworkCore;
 using Application.Interfaces.IHttpServices;
+using Serilog;
 
 var builder = WebApplication.CreateBuilder(args);
 

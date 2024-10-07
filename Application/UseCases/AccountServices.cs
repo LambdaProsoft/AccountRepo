@@ -1,4 +1,5 @@
-﻿using Application.Interfaces.IAccountModel;
+﻿using Application.Exceptions;
+using Application.Interfaces.IAccountModel;
 using Application.Interfaces.IAccountType;
 using Application.Interfaces.IHttpServices;
 using Application.Interfaces.IStateAccount;
@@ -225,9 +226,25 @@ namespace Application.UseCases
             return response;
         }
 
+
         public Task DisableAccount(Guid id)
         {
             throw new NotImplementedException();
+        }
+
+        public async Task<bool> UpdateBalance(Guid id, AccountBalanceRequest balance)
+        {
+            var account = await _accountQuery.GetAccountById(id);
+            if (account == null)
+            {
+                return false;
+            }
+            else
+            {
+                await _accountCommand.UpdateBalance(id, balance.Balance);
+                return true;
+            }
+
         }
     }
 }
