@@ -45,13 +45,19 @@ namespace Application.UseCases
 
         public async Task<AccountResponse> CreateAccount(AccountCreateRequest accountRequest)
         {
+            //verifica si ya existe una cuenta con ese usuario
+            if (await _accountQuery.UserExists(accountRequest.User))
+            {
+                throw new Conflict("This user already have an account");
+            }
+
+            //Asignar el tipo de moneda por pais?
+
             string accountNumber = await GenerateAccountNumber();
 
             string cbu = await GenerateCBU();
 
             string alias = await GenerateAlias();
-
-            // Deberiamos validar que el userId no se repita en otras cuentas?
 
             var account = new AccountModel
             {
@@ -173,8 +179,10 @@ namespace Application.UseCases
             var user = await _userHttpService.GetUserById(account.UserId)
                 ?? throw new InvalidOperationException("Users not found");
 
-            var transfers = await _transferHttpService.GetAllTransfersByAccount(account.AccountId)
-                ?? throw new InvalidOperationException("Transfers not found");
+            //var transfers = await _transferHttpService.GetAllTransfersByAccount(account.AccountId)
+            //    ?? throw new InvalidOperationException("Transfers not found");
+
+            var transfers = _transferHttpService.GetAllTransfersByAccount(account.AccountId);
 
             var response = new AccountDetailsResponse
             {
@@ -205,10 +213,26 @@ namespace Application.UseCases
                 return null;
             }
 
-            account.Alias = accountRequest.Alias;
-            account.CurrencyId = accountRequest.Currency;
-            account.StateId = accountRequest.State;
-            account.AccTypeId = accountRequest.AccountType;
+            // Actualiza los campos que no son nulos
+            if (!string.IsNullOrWhiteSpace(accountRequest.Alias))
+            {
+                account.Alias = accountRequest.Alias;
+            }
+
+            if (accountRequest.Currency.HasValue)
+            {
+                account.CurrencyId = accountRequest.Currency.Value;
+            }
+
+            if (accountRequest.State.HasValue)
+            {
+                account.StateId = accountRequest.State.Value;
+            }
+
+            if (accountRequest.AccountType.HasValue)
+            {
+                account.AccTypeId = accountRequest.AccountType.Value;
+            }
 
             await _accountCommand.UpdateAccount(account);
 
@@ -227,9 +251,31 @@ namespace Application.UseCases
         }
 
 
-        public Task DisableAccount(Guid id)
+        public async Task<AccountResponse> DisableAccountByUser(int userId)
         {
-            throw new NotImplementedException();
+            //verifica que el usuario tenga una cuenta
+            if (!await _accountQuery.UserExists(userId))
+            {
+                return null;
+            }
+            var account = await _accountQuery.GetAccountByUser(userId);
+
+            account.StateId = 3;
+
+            await _accountCommand.UpdateAccount(account);
+
+            var response = new AccountResponse
+            {
+                CBU = account.CBU,
+                Alias = account.Alias,
+                NumeroDeCuenta = account.NumberAccount,
+                Balance = account.Balance,
+                TipoDeCuenta = _accountTypeServices.GetById(account.AccTypeId).Result.Name,
+                TipoDeMoneda = _typeCurrencyServices.GetById(account.CurrencyId).Result.Name,
+                EstadoDeLaCuenta = _stateAccountServices.GetById(account.StateId).Result.Name
+            };
+
+            return response;
         }
 
         public async Task<bool> UpdateBalance(Guid id, AccountBalanceRequest balance)
@@ -245,6 +291,45 @@ namespace Application.UseCases
                 return true;
             }
 
+        }
+
+        public async Task<AccountDetailsResponse> GetByUserId(int userId)
+        {
+            //verifica que el usuario tenga una cuenta
+            if(!await _accountQuery.UserExists(userId))
+            {
+                return null;
+            }
+
+            var account = await _accountQuery.GetAccountByUser(userId);
+
+            var user = await _userHttpService.GetUserById(userId)
+                ?? throw new ExceptionNotFound("Users not found");
+
+            //var transfers = await _transferHttpService.GetAllTransfersByAccount(account.AccountId)
+            //    ?? throw new ExceptionNotFound("Transfers not found");
+
+            var transfers = _transferHttpService.GetAllTransfersByAccount(account.AccountId);
+
+            var response = new AccountDetailsResponse
+            {
+                Account = new AccountResponse
+                {
+                    CBU = account.CBU,
+                    Alias = account.Alias,
+                    NumeroDeCuenta = account.NumberAccount,
+                    Balance = account.Balance,
+                    TipoDeCuenta = _accountTypeServices.GetById(account.AccTypeId).Result.Name,
+                    TipoDeMoneda = _typeCurrencyServices.GetById(account.CurrencyId).Result.Name,
+                    EstadoDeLaCuenta = _stateAccountServices.GetById(account.StateId).Result.Name
+                },
+
+                // Suponiendo que los responses sean iguales
+                User = user,
+                Transfers = transfers
+            };
+
+            return response;
         }
     }
 }

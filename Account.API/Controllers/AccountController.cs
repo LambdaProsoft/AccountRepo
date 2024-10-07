@@ -76,12 +76,12 @@ namespace Account.API.Controllers
         /// Actualiza una cuenta por su Id y datos ingresados
         /// </summary>
         /// <param name="accountId">El ID de la cuenta</param>
-        /// /// <param name="accountRequest">Objeto de solicitud que contiene la información para actualizar una cuenta</param>
+        /// <param name="accountRequest">Objeto de solicitud que contiene la información para actualizar una cuenta</param>
         /// <returns>La cuenta con los datos modificados</returns>
-        [HttpPut("{id:guid}")]
+        [HttpPut("Update")]
         [ProducesResponseType(typeof(AccountResponse), 200)]
         [ProducesResponseType(400)]
-        public async Task<IActionResult> UpdateAccount(Guid accountId, AccountUpdateRequest accountRequest)
+        public async Task<IActionResult> UpdateAccount(Guid accountId, [FromBody] AccountUpdateRequest accountRequest)
         {
             if (!ModelState.IsValid)
             {
@@ -104,7 +104,7 @@ namespace Account.API.Controllers
             }
 
         }
-        [HttpPut]
+        [HttpPut("Update/Balance")]
         [ProducesResponseType(200)]
         [ProducesResponseType(404)]
         public async Task<IActionResult> UpdateBalancee(Guid accountId, AccountBalanceRequest balance)
@@ -128,6 +128,60 @@ namespace Account.API.Controllers
                 return StatusCode(500, new { Message = ex.Message });
             }
 
+        }
+
+        /// <summary>
+        /// Obtiene una cuenta por usuario
+        /// </summary>
+        /// <param name="userId">El ID de un usuario</param>
+        /// <returns>La información de la cuenta solicitada, junto con el usuario y transferencias</returns>
+        [HttpGet("{userId}")]
+        [ProducesResponseType(typeof(AccountDetailsResponse), 200)]
+        [ProducesResponseType(404)]
+        public async Task<IActionResult> GetAccountByUserId(int userId)
+        {
+            try
+            {
+                var accountResponse = await _accountServices.GetByUserId(userId);
+
+                if (accountResponse == null)
+                {
+                    return NotFound();
+                }
+
+                return Ok(accountResponse);
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(500, new { Message = ex.Message });
+            }
+        }
+
+        /// <summary>
+        /// Deshabilita una cuenta por usuario
+        /// </summary>
+        /// <param name="userId">El ID de un usuario</param>
+        /// <returns>Informacion de la cuenta con el estado actualizado</returns>
+        [HttpDelete("{userId}")]
+        [ProducesResponseType(typeof(AccountResponse), 200)]
+        [ProducesResponseType(404)]
+        public async Task<IActionResult> DeleteAccountByUser(int userId)
+        {
+            try
+            {
+                var accountResponse = await _accountServices.DisableAccountByUser(userId); ;
+
+                if (accountResponse == null)
+                {
+                    return NotFound();
+                }
+
+                return Ok(accountResponse);
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(500, new { Message = ex.Message });
+            }
         }
     }
 }

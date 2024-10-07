@@ -429,3 +429,5 @@ C:\Users\Ivo\Documents\4to cuatrimestre\Proyecto Software\Projecto Banco\Account
 C:\Users\Ivo\Documents\4to cuatrimestre\Proyecto Software\Projecto Banco\AccountRepo\Account.API\obj\Debug\net8.0\ref\Account.API.dll
 C:\Users\Ivo\Documents\4to cuatrimestre\Proyecto Software\Projecto Banco\AccountRepo\Account.API\bin\Debug\net8.0\Serilog.dll
 C:\Users\Ivo\Documents\4to cuatrimestre\Proyecto Software\Projecto Banco\AccountRepo\Account.API\bin\Debug\net8.0\Serilog.Sinks.File.dll
+C:\Users\gonza\Desktop\PS- Proyecto\SRC\VirtualWallet-preview\AccountRepo\Account.API\bin\Debug\net8.0\Serilog.dll
+C:\Users\gonza\Desktop\PS- Proyecto\SRC\VirtualWallet-preview\AccountRepo\Account.API\bin\Debug\net8.0\Serilog.Sinks.File.dll

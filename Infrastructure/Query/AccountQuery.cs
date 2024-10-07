@@ -37,5 +37,18 @@ namespace AccountInfrastructure.Query
             return !await _context.Account
                 .AnyAsync(a => a.Alias == alias);
         }
+
+        public async Task<bool> UserExists(int userId)
+        {
+            return await _context.Account
+                .AnyAsync(a => a.UserId == userId);
+        }
+
+        public async Task<AccountModel> GetAccountByUser(int userId)
+        {
+            var account = await _context.Account
+                .FirstOrDefaultAsync(x => x.UserId == userId);
+            return account;
+        }
     }
 }

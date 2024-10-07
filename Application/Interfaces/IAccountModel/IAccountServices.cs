@@ -7,8 +7,9 @@ namespace Application.Interfaces.IAccountModel
     {
         Task<AccountResponse> CreateAccount(AccountCreateRequest accountRequest);
         Task<AccountDetailsResponse> GetById(Guid id);
+        Task<AccountDetailsResponse> GetByUserId(int userId);
         Task<AccountResponse> UpdateAccount(Guid id, AccountUpdateRequest accountRequest);
-        Task DisableAccount(Guid id);
         Task<bool> UpdateBalance(Guid id, AccountBalanceRequest balance);
+        Task<AccountResponse> DisableAccountByUser(int UserId);
     }
 }
