@@ -23,6 +23,14 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
+Log.Logger = new LoggerConfiguration()
+    .WriteTo.File("logs/log.txt", rollingInterval: RollingInterval.Day)
+    .CreateLogger();
+builder.Logging.ClearProviders();
+builder.Logging.AddSerilog();
+
+Log.Logger.Information("Starting the Web API...");
+
 //config
 builder.Services.AddHttpClient<IUserHttpService, UserHttpService>(client =>
 {
@@ -56,8 +64,9 @@ builder.Services.AddScoped<IStateAccountServices, StateAccountServices>();
 builder.Services.AddScoped<ITypeCurrencyQuery, TypeCurrencyQuery>();
 builder.Services.AddScoped<ITypeCurrencyServices, TypeCurrencyServices>();
 
-
 var app = builder.Build();
+
+Log.Logger.Information("Web API is configured and ready to handle requests.");
 
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())

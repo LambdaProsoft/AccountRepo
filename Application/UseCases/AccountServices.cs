@@ -7,8 +7,9 @@ using Application.Interfaces.ITypeCurrency;
 using Application.Request;
 using Application.Response;
 using Domain.Models;
-using System.Reflection.Metadata.Ecma335;
-using System.Runtime.InteropServices;
+using Microsoft.Extensions.Logging;
+using Serilog;
+
 
 namespace Application.UseCases
 {
@@ -20,6 +21,8 @@ namespace Application.UseCases
         private readonly ITypeCurrencyServices _typeCurrencyServices;
         private readonly IStateAccountServices _stateAccountServices;
 
+        private readonly ILogger<AccountServices> _logger;
+
         private readonly IUserHttpService _userHttpService;
         private readonly ITransferHttpService _transferHttpService;
 
@@ -30,7 +33,7 @@ namespace Application.UseCases
             ITypeCurrencyServices typeCurrencyServices,
             IStateAccountServices stateAccountServices,
             ITransferHttpService transferHttpService,
-            IUserHttpService userHttpService)
+            IUserHttpService userHttpService, ILogger<AccountServices> logger)
         {
             _accountCommand = accountCommand;
             _accountQuery = accountQuery;
@@ -39,19 +42,28 @@ namespace Application.UseCases
             _stateAccountServices = stateAccountServices;
             _transferHttpService = transferHttpService;
             _userHttpService = userHttpService;
+            _logger = logger;
 
             _random = new Random();
         }
 
         public async Task<AccountResponse> CreateAccount(AccountCreateRequest accountRequest)
         {
+            //verifica si ya existe una cuenta con ese usuario
+            if (await _accountQuery.UserExists(accountRequest.User))
+            {
+                _logger.LogInformation("This user already have an account {Time}", DateTime.UtcNow);
+
+                throw new Conflict("This user already have an account");
+            }
+
+            //Asignar el tipo de moneda por pais?
+
             string accountNumber = await GenerateAccountNumber();
 
             string cbu = await GenerateCBU();
 
             string alias = await GenerateAlias();
-
-            // Deberiamos validar que el userId no se repita en otras cuentas?
 
             var account = new AccountModel
             {
@@ -65,6 +77,8 @@ namespace Application.UseCases
                 CurrencyId = accountRequest.Currency,
                 StateId = 1 //Por defecto la iniciamos activa
             };
+
+            _logger.LogInformation("Adding account {Time}", DateTime.UtcNow);
 
             await _accountCommand.InsertAccount(account);
 
@@ -173,8 +187,10 @@ namespace Application.UseCases
             var user = await _userHttpService.GetUserById(account.UserId)
                 ?? throw new InvalidOperationException("Users not found");
 
-            var transfers = await _transferHttpService.GetAllTransfersByAccount(account.AccountId)
-                ?? throw new InvalidOperationException("Transfers not found");
+            //var transfers = await _transferHttpService.GetAllTransfersByAccount(account.AccountId)
+            //    ?? throw new InvalidOperationException("Transfers not found");
+
+            var transfers = _transferHttpService.GetAllTransfersByAccount(account.AccountId);
 
             var response = new AccountDetailsResponse
             {
@@ -205,10 +221,32 @@ namespace Application.UseCases
                 return null;
             }
 
-            account.Alias = accountRequest.Alias;
-            account.CurrencyId = accountRequest.Currency;
-            account.StateId = accountRequest.State;
-            account.AccTypeId = accountRequest.AccountType;
+            // Actualiza los campos que no son nulos
+            if (!string.IsNullOrWhiteSpace(accountRequest.Alias))
+            {
+                account.Alias = accountRequest.Alias;
+                _logger.LogInformation("account alias {Time}", DateTime.UtcNow);
+            }
+
+            if (accountRequest.Currency.HasValue)
+            {
+                account.CurrencyId = accountRequest.Currency.Value;
+                _logger.LogInformation("acount currency {Time}", DateTime.UtcNow);
+            }
+
+            if (accountRequest.State.HasValue)
+            {
+                account.StateId = accountRequest.State.Value;
+                _logger.LogInformation("account state {Time}", DateTime.UtcNow);
+            }
+
+            if (accountRequest.AccountType.HasValue)
+            {
+                account.AccTypeId = accountRequest.AccountType.Value;
+                _logger.LogInformation("account type {Time}", DateTime.UtcNow);
+            }
+
+            _logger.LogInformation("Updating account {Time}", DateTime.UtcNow);
 
             await _accountCommand.UpdateAccount(account);
 
@@ -227,9 +265,36 @@ namespace Application.UseCases
         }
 
 
-        public Task DisableAccount(Guid id)
+        public async Task<AccountResponse> DisableAccountByUser(int userId)
         {
-            throw new NotImplementedException();
+            //verifica que el usuario tenga una cuenta
+            if (!await _accountQuery.UserExists(userId))
+            {
+                return null;
+            }
+
+            _logger.LogInformation("Searching account {Time}", DateTime.UtcNow);
+
+            var account = await _accountQuery.GetAccountByUser(userId);
+
+            account.StateId = 3;
+
+            _logger.LogInformation("Updating account {Time}", DateTime.UtcNow);
+
+            await _accountCommand.UpdateAccount(account);
+
+            var response = new AccountResponse
+            {
+                CBU = account.CBU,
+                Alias = account.Alias,
+                NumeroDeCuenta = account.NumberAccount,
+                Balance = account.Balance,
+                TipoDeCuenta = _accountTypeServices.GetById(account.AccTypeId).Result.Name,
+                TipoDeMoneda = _typeCurrencyServices.GetById(account.CurrencyId).Result.Name,
+                EstadoDeLaCuenta = _stateAccountServices.GetById(account.StateId).Result.Name
+            };
+
+            return response;
         }
 
         public async Task<bool> UpdateBalance(Guid id, AccountBalanceRequest balance)
@@ -241,10 +306,54 @@ namespace Application.UseCases
             }
             else
             {
+                _logger.LogInformation("Updating balance account {Time}", DateTime.UtcNow);
                 await _accountCommand.UpdateBalance(id, balance.Balance);
                 return true;
             }
 
+        }
+
+        public async Task<AccountDetailsResponse> GetByUserId(int userId)
+        {
+            //verifica que el usuario tenga una cuenta
+            _logger.LogInformation("Cheking if user already exist {Time}", DateTime.UtcNow);
+
+            if (!await _accountQuery.UserExists(userId))
+            {
+                return null;
+            }
+
+            var account = await _accountQuery.GetAccountByUser(userId);
+
+            _logger.LogInformation("Searching account {Time}", DateTime.UtcNow);
+
+            var user = await _userHttpService.GetUserById(userId)
+                ?? throw new ExceptionNotFound("Users not found");
+
+            //var transfers = await _transferHttpService.GetAllTransfersByAccount(account.AccountId)
+            //    ?? throw new ExceptionNotFound("Transfers not found");
+
+            var transfers = _transferHttpService.GetAllTransfersByAccount(account.AccountId);
+
+            var response = new AccountDetailsResponse
+            {
+                Account = new AccountResponse
+                {
+                    CBU = account.CBU,
+                    Alias = account.Alias,
+                    NumeroDeCuenta = account.NumberAccount,
+                    Balance = account.Balance,
+                    TipoDeCuenta = _accountTypeServices.GetById(account.AccTypeId).Result.Name,
+                    TipoDeMoneda = _typeCurrencyServices.GetById(account.CurrencyId).Result.Name,
+                    EstadoDeLaCuenta = _stateAccountServices.GetById(account.StateId).Result.Name
+                },
+
+                // Suponiendo que los responses sean iguales
+                User = user,
+                Transfers = transfers
+            };
+
+            return response;
         }
     }
 }
