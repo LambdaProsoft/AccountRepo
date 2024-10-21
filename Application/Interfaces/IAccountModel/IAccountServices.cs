@@ -9,7 +9,7 @@ namespace Application.Interfaces.IAccountModel
         Task<AccountDetailsResponse> GetById(Guid id);
         Task<AccountDetailsResponse> GetByUserId(int userId);
         Task<AccountResponse> UpdateAccount(Guid id, AccountUpdateRequest accountRequest);
-        Task<bool> UpdateBalance(Guid id, AccountBalanceRequest balance);
+        Task<TransferProcess> UpdateBalance(Guid id, AccountBalanceRequest balance);
         Task<AccountResponse> DisableAccountByUser(int UserId);
     }
 }

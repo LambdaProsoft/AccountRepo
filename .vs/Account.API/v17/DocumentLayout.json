@@ -3,12 +3,80 @@
   "WorkspaceRootPath": "C:\\Users\\Ivo\\Documents\\4to cuatrimestre\\Proyecto Software\\Projecto Banco\\AccountRepo\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{79456C55-45BE-49C4-819B-D1FC137242EE}|Application\\Application.csproj|c:\\users\\ivo\\documents\\4to cuatrimestre\\proyecto software\\projecto banco\\accountrepo\\application\\response\\transferprocess.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{79456C55-45BE-49C4-819B-D1FC137242EE}|Application\\Application.csproj|solutionrelative:application\\response\\transferprocess.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0DFB1ED5-EAEC-4232-B7C6-27304EF84642}|Account.API\\Account.API.csproj|c:\\users\\ivo\\documents\\4to cuatrimestre\\proyecto software\\projecto banco\\accountrepo\\account.api\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0DFB1ED5-EAEC-4232-B7C6-27304EF84642}|Account.API\\Account.API.csproj|solutionrelative:account.api\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{79456C55-45BE-49C4-819B-D1FC137242EE}|Application\\Application.csproj|c:\\users\\ivo\\documents\\4to cuatrimestre\\proyecto software\\projecto banco\\accountrepo\\application\\usecases\\accountservices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{79456C55-45BE-49C4-819B-D1FC137242EE}|Application\\Application.csproj|solutionrelative:application\\usecases\\accountservices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{79456C55-45BE-49C4-819B-D1FC137242EE}|Application\\Application.csproj|c:\\users\\ivo\\documents\\4to cuatrimestre\\proyecto software\\projecto banco\\accountrepo\\application\\response\\accountdetailsresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{79456C55-45BE-49C4-819B-D1FC137242EE}|Application\\Application.csproj|solutionrelative:application\\response\\accountdetailsresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{79456C55-45BE-49C4-819B-D1FC137242EE}|Application\\Application.csproj|c:\\users\\ivo\\documents\\4to cuatrimestre\\proyecto software\\projecto banco\\accountrepo\\application\\response\\accountresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{79456C55-45BE-49C4-819B-D1FC137242EE}|Application\\Application.csproj|solutionrelative:application\\response\\accountresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{79456C55-45BE-49C4-819B-D1FC137242EE}|Application\\Application.csproj|c:\\users\\ivo\\documents\\4to cuatrimestre\\proyecto software\\projecto banco\\accountrepo\\application\\interfaces\\iaccountmodel\\iaccountservices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{79456C55-45BE-49C4-819B-D1FC137242EE}|Application\\Application.csproj|solutionrelative:application\\interfaces\\iaccountmodel\\iaccountservices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{79456C55-45BE-49C4-819B-D1FC137242EE}|Application\\Application.csproj|c:\\users\\ivo\\documents\\4to cuatrimestre\\proyecto software\\projecto banco\\accountrepo\\application\\response\\genericresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{79456C55-45BE-49C4-819B-D1FC137242EE}|Application\\Application.csproj|solutionrelative:application\\response\\genericresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{79456C55-45BE-49C4-819B-D1FC137242EE}|Application\\Application.csproj|c:\\users\\ivo\\documents\\4to cuatrimestre\\proyecto software\\projecto banco\\accountrepo\\application\\interfaces\\iaccountmodel\\iaccountquery.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{79456C55-45BE-49C4-819B-D1FC137242EE}|Application\\Application.csproj|solutionrelative:application\\interfaces\\iaccountmodel\\iaccountquery.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{79456C55-45BE-49C4-819B-D1FC137242EE}|Application\\Application.csproj|c:\\users\\ivo\\documents\\4to cuatrimestre\\proyecto software\\projecto banco\\accountrepo\\application\\interfaces\\iaccountmodel\\iaccountcommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{79456C55-45BE-49C4-819B-D1FC137242EE}|Application\\Application.csproj|solutionrelative:application\\interfaces\\iaccountmodel\\iaccountcommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{79456C55-45BE-49C4-819B-D1FC137242EE}|Application\\Application.csproj|c:\\users\\ivo\\documents\\4to cuatrimestre\\proyecto software\\projecto banco\\accountrepo\\application\\usecases\\accounttypeservices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{79456C55-45BE-49C4-819B-D1FC137242EE}|Application\\Application.csproj|solutionrelative:application\\usecases\\accounttypeservices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{79456C55-45BE-49C4-819B-D1FC137242EE}|Application\\Application.csproj|c:\\users\\ivo\\documents\\4to cuatrimestre\\proyecto software\\projecto banco\\accountrepo\\application\\usecases\\personalaccountservices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{79456C55-45BE-49C4-819B-D1FC137242EE}|Application\\Application.csproj|solutionrelative:application\\usecases\\personalaccountservices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{79456C55-45BE-49C4-819B-D1FC137242EE}|Application\\Application.csproj|c:\\users\\ivo\\documents\\4to cuatrimestre\\proyecto software\\projecto banco\\accountrepo\\application\\response\\transferresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{79456C55-45BE-49C4-819B-D1FC137242EE}|Application\\Application.csproj|solutionrelative:application\\response\\transferresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A458746F-66EE-4E79-AF57-5C089B413225}|Domain\\Domain.csproj|c:\\users\\ivo\\documents\\4to cuatrimestre\\proyecto software\\projecto banco\\accountrepo\\domain\\models\\accountmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A458746F-66EE-4E79-AF57-5C089B413225}|Domain\\Domain.csproj|solutionrelative:domain\\models\\accountmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A458746F-66EE-4E79-AF57-5C089B413225}|Domain\\Domain.csproj|c:\\users\\ivo\\documents\\4to cuatrimestre\\proyecto software\\projecto banco\\accountrepo\\domain\\models\\typecurrency.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A458746F-66EE-4E79-AF57-5C089B413225}|Domain\\Domain.csproj|solutionrelative:domain\\models\\typecurrency.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A458746F-66EE-4E79-AF57-5C089B413225}|Domain\\Domain.csproj|c:\\users\\ivo\\documents\\4to cuatrimestre\\proyecto software\\projecto banco\\accountrepo\\domain\\models\\stateaccount.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A458746F-66EE-4E79-AF57-5C089B413225}|Domain\\Domain.csproj|solutionrelative:domain\\models\\stateaccount.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A458746F-66EE-4E79-AF57-5C089B413225}|Domain\\Domain.csproj|c:\\users\\ivo\\documents\\4to cuatrimestre\\proyecto software\\projecto banco\\accountrepo\\domain\\models\\personalaccount.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A458746F-66EE-4E79-AF57-5C089B413225}|Domain\\Domain.csproj|solutionrelative:domain\\models\\personalaccount.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A458746F-66EE-4E79-AF57-5C089B413225}|Domain\\Domain.csproj|c:\\users\\ivo\\documents\\4to cuatrimestre\\proyecto software\\projecto banco\\accountrepo\\domain\\models\\accounttype.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A458746F-66EE-4E79-AF57-5C089B413225}|Domain\\Domain.csproj|solutionrelative:domain\\models\\accounttype.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0DFB1ED5-EAEC-4232-B7C6-27304EF84642}|Account.API\\Account.API.csproj|c:\\users\\ivo\\documents\\4to cuatrimestre\\proyecto software\\projecto banco\\accountrepo\\account.api\\appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{0DFB1ED5-EAEC-4232-B7C6-27304EF84642}|Account.API\\Account.API.csproj|solutionrelative:account.api\\appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6FF7F13C-AA05-4F74-B0A2-74403D87FF3F}|Infrastructure\\Infrastructure.csproj|c:\\users\\ivo\\documents\\4to cuatrimestre\\proyecto software\\projecto banco\\accountrepo\\infrastructure\\command\\accountcommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6FF7F13C-AA05-4F74-B0A2-74403D87FF3F}|Infrastructure\\Infrastructure.csproj|solutionrelative:infrastructure\\command\\accountcommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{79456C55-45BE-49C4-819B-D1FC137242EE}|Application\\Application.csproj|c:\\users\\ivo\\documents\\4to cuatrimestre\\proyecto software\\projecto banco\\accountrepo\\application\\usecases\\userhttpservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -27,28 +95,12 @@
       "RelativeMoniker": "D:0:0:{79456C55-45BE-49C4-819B-D1FC137242EE}|Application\\Application.csproj|solutionrelative:application\\usecases\\stateaccountservices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{79456C55-45BE-49C4-819B-D1FC137242EE}|Application\\Application.csproj|c:\\users\\ivo\\documents\\4to cuatrimestre\\proyecto software\\projecto banco\\accountrepo\\application\\usecases\\personalaccountservices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{79456C55-45BE-49C4-819B-D1FC137242EE}|Application\\Application.csproj|solutionrelative:application\\usecases\\personalaccountservices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6FF7F13C-AA05-4F74-B0A2-74403D87FF3F}|Infrastructure\\Infrastructure.csproj|c:\\users\\ivo\\documents\\4to cuatrimestre\\proyecto software\\projecto banco\\accountrepo\\infrastructure\\command\\accountcommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6FF7F13C-AA05-4F74-B0A2-74403D87FF3F}|Infrastructure\\Infrastructure.csproj|solutionrelative:infrastructure\\command\\accountcommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{79456C55-45BE-49C4-819B-D1FC137242EE}|Application\\Application.csproj|c:\\users\\ivo\\documents\\4to cuatrimestre\\proyecto software\\projecto banco\\accountrepo\\application\\interfaces\\iaccountmodel\\iaccountcommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{79456C55-45BE-49C4-819B-D1FC137242EE}|Application\\Application.csproj|solutionrelative:application\\interfaces\\iaccountmodel\\iaccountcommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{0DFB1ED5-EAEC-4232-B7C6-27304EF84642}|Account.API\\Account.API.csproj|c:\\users\\ivo\\documents\\4to cuatrimestre\\proyecto software\\projecto banco\\accountrepo\\account.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{0DFB1ED5-EAEC-4232-B7C6-27304EF84642}|Account.API\\Account.API.csproj|solutionrelative:account.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{0DFB1ED5-EAEC-4232-B7C6-27304EF84642}|Account.API\\Account.API.csproj|c:\\users\\ivo\\documents\\4to cuatrimestre\\proyecto software\\projecto banco\\accountrepo\\account.api\\controllers\\accounttypecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{0DFB1ED5-EAEC-4232-B7C6-27304EF84642}|Account.API\\Account.API.csproj|solutionrelative:account.api\\controllers\\accounttypecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0DFB1ED5-EAEC-4232-B7C6-27304EF84642}|Account.API\\Account.API.csproj|c:\\users\\ivo\\documents\\4to cuatrimestre\\proyecto software\\projecto banco\\accountrepo\\account.api\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0DFB1ED5-EAEC-4232-B7C6-27304EF84642}|Account.API\\Account.API.csproj|solutionrelative:account.api\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{0DFB1ED5-EAEC-4232-B7C6-27304EF84642}|Account.API\\Account.API.csproj|c:\\users\\ivo\\documents\\4to cuatrimestre\\proyecto software\\projecto banco\\accountrepo\\account.api\\controllers\\typecurrencycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -63,52 +115,12 @@
       "RelativeMoniker": "D:0:0:{0DFB1ED5-EAEC-4232-B7C6-27304EF84642}|Account.API\\Account.API.csproj|solutionrelative:account.api\\logs\\log20241009.txt||{8B382828-6202-11D1-8870-0000F87579D2}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{79456C55-45BE-49C4-819B-D1FC137242EE}|Application\\Application.csproj|c:\\users\\ivo\\documents\\4to cuatrimestre\\proyecto software\\projecto banco\\accountrepo\\application\\interfaces\\iaccountmodel\\iaccountservices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{79456C55-45BE-49C4-819B-D1FC137242EE}|Application\\Application.csproj|solutionrelative:application\\interfaces\\iaccountmodel\\iaccountservices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{79456C55-45BE-49C4-819B-D1FC137242EE}|Application\\Application.csproj|c:\\users\\ivo\\documents\\4to cuatrimestre\\proyecto software\\projecto banco\\accountrepo\\application\\interfaces\\iaccountmodel\\iaccountquery.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{79456C55-45BE-49C4-819B-D1FC137242EE}|Application\\Application.csproj|solutionrelative:application\\interfaces\\iaccountmodel\\iaccountquery.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A458746F-66EE-4E79-AF57-5C089B413225}|Domain\\Domain.csproj|c:\\users\\ivo\\documents\\4to cuatrimestre\\proyecto software\\projecto banco\\accountrepo\\domain\\models\\accountmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A458746F-66EE-4E79-AF57-5C089B413225}|Domain\\Domain.csproj|solutionrelative:domain\\models\\accountmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{79456C55-45BE-49C4-819B-D1FC137242EE}|Application\\Application.csproj|c:\\users\\ivo\\documents\\4to cuatrimestre\\proyecto software\\projecto banco\\accountrepo\\application\\response\\personalaccountresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{79456C55-45BE-49C4-819B-D1FC137242EE}|Application\\Application.csproj|solutionrelative:application\\response\\personalaccountresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{79456C55-45BE-49C4-819B-D1FC137242EE}|Application\\Application.csproj|c:\\users\\ivo\\documents\\4to cuatrimestre\\proyecto software\\projecto banco\\accountrepo\\application\\response\\genericresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{79456C55-45BE-49C4-819B-D1FC137242EE}|Application\\Application.csproj|solutionrelative:application\\response\\genericresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{79456C55-45BE-49C4-819B-D1FC137242EE}|Application\\Application.csproj|c:\\users\\ivo\\documents\\4to cuatrimestre\\proyecto software\\projecto banco\\accountrepo\\application\\request\\accountbalancerequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{79456C55-45BE-49C4-819B-D1FC137242EE}|Application\\Application.csproj|solutionrelative:application\\request\\accountbalancerequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{79456C55-45BE-49C4-819B-D1FC137242EE}|Application\\Application.csproj|c:\\users\\ivo\\documents\\4to cuatrimestre\\proyecto software\\projecto banco\\accountrepo\\application\\response\\accountresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{79456C55-45BE-49C4-819B-D1FC137242EE}|Application\\Application.csproj|solutionrelative:application\\response\\accountresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{79456C55-45BE-49C4-819B-D1FC137242EE}|Application\\Application.csproj|c:\\users\\ivo\\documents\\4to cuatrimestre\\proyecto software\\projecto banco\\accountrepo\\application\\response\\accountdetailsresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{79456C55-45BE-49C4-819B-D1FC137242EE}|Application\\Application.csproj|solutionrelative:application\\response\\accountdetailsresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A458746F-66EE-4E79-AF57-5C089B413225}|Domain\\Domain.csproj|c:\\users\\ivo\\documents\\4to cuatrimestre\\proyecto software\\projecto banco\\accountrepo\\domain\\models\\typecurrency.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A458746F-66EE-4E79-AF57-5C089B413225}|Domain\\Domain.csproj|solutionrelative:domain\\models\\typecurrency.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A458746F-66EE-4E79-AF57-5C089B413225}|Domain\\Domain.csproj|c:\\users\\ivo\\documents\\4to cuatrimestre\\proyecto software\\projecto banco\\accountrepo\\domain\\models\\stateaccount.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A458746F-66EE-4E79-AF57-5C089B413225}|Domain\\Domain.csproj|solutionrelative:domain\\models\\stateaccount.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A458746F-66EE-4E79-AF57-5C089B413225}|Domain\\Domain.csproj|c:\\users\\ivo\\documents\\4to cuatrimestre\\proyecto software\\projecto banco\\accountrepo\\domain\\models\\personalaccount.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A458746F-66EE-4E79-AF57-5C089B413225}|Domain\\Domain.csproj|solutionrelative:domain\\models\\personalaccount.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A458746F-66EE-4E79-AF57-5C089B413225}|Domain\\Domain.csproj|c:\\users\\ivo\\documents\\4to cuatrimestre\\proyecto software\\projecto banco\\accountrepo\\domain\\models\\accounttype.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A458746F-66EE-4E79-AF57-5C089B413225}|Domain\\Domain.csproj|solutionrelative:domain\\models\\accounttype.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{6FF7F13C-AA05-4F74-B0A2-74403D87FF3F}|Infrastructure\\Infrastructure.csproj|c:\\users\\ivo\\documents\\4to cuatrimestre\\proyecto software\\projecto banco\\accountrepo\\infrastructure\\query\\accountquery.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -155,10 +167,6 @@
       "RelativeMoniker": "D:0:0:{79456C55-45BE-49C4-819B-D1FC137242EE}|Application\\Application.csproj|solutionrelative:application\\exceptions\\exceptionnotfound.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{0DFB1ED5-EAEC-4232-B7C6-27304EF84642}|Account.API\\Account.API.csproj|c:\\users\\ivo\\documents\\4to cuatrimestre\\proyecto software\\projecto banco\\accountrepo\\account.api\\appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{0DFB1ED5-EAEC-4232-B7C6-27304EF84642}|Account.API\\Account.API.csproj|solutionrelative:account.api\\appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{6FF7F13C-AA05-4F74-B0A2-74403D87FF3F}|Infrastructure\\Infrastructure.csproj|c:\\users\\ivo\\documents\\4to cuatrimestre\\proyecto software\\projecto banco\\accountrepo\\infrastructure\\migrations\\20241005190728_init.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{6FF7F13C-AA05-4F74-B0A2-74403D87FF3F}|Infrastructure\\Infrastructure.csproj|solutionrelative:infrastructure\\migrations\\20241005190728_init.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
@@ -170,110 +178,110 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 5,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "TransferHttpService.cs",
-              "DocumentMoniker": "C:\\Users\\Ivo\\Documents\\4to cuatrimestre\\Proyecto Software\\Projecto Banco\\AccountRepo\\Application\\UseCases\\TransferHttpService.cs",
-              "RelativeDocumentMoniker": "Application\\UseCases\\TransferHttpService.cs",
-              "ToolTip": "C:\\Users\\Ivo\\Documents\\4to cuatrimestre\\Proyecto Software\\Projecto Banco\\AccountRepo\\Application\\UseCases\\TransferHttpService.cs",
-              "RelativeToolTip": "Application\\UseCases\\TransferHttpService.cs",
-              "ViewState": "AgIAAB8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 5,
+              "Title": "IAccountServices.cs",
+              "DocumentMoniker": "C:\\Users\\Ivo\\Documents\\4to cuatrimestre\\Proyecto Software\\Projecto Banco\\AccountRepo\\Application\\Interfaces\\IAccountModel\\IAccountServices.cs",
+              "RelativeDocumentMoniker": "Application\\Interfaces\\IAccountModel\\IAccountServices.cs",
+              "ToolTip": "C:\\Users\\Ivo\\Documents\\4to cuatrimestre\\Proyecto Software\\Projecto Banco\\AccountRepo\\Application\\Interfaces\\IAccountModel\\IAccountServices.cs",
+              "RelativeToolTip": "Application\\Interfaces\\IAccountModel\\IAccountServices.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAqwAsAAAAeAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-05T22:32:01.378Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "TypeCurrencyServices.cs",
-              "DocumentMoniker": "C:\\Users\\Ivo\\Documents\\4to cuatrimestre\\Proyecto Software\\Projecto Banco\\AccountRepo\\Application\\UseCases\\TypeCurrencyServices.cs",
-              "RelativeDocumentMoniker": "Application\\UseCases\\TypeCurrencyServices.cs",
-              "ToolTip": "C:\\Users\\Ivo\\Documents\\4to cuatrimestre\\Proyecto Software\\Projecto Banco\\AccountRepo\\Application\\UseCases\\TypeCurrencyServices.cs",
-              "RelativeToolTip": "Application\\UseCases\\TypeCurrencyServices.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-05T22:32:03.566Z",
+              "WhenOpened": "2024-10-05T21:14:55.341Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "UserHttpService.cs",
-              "DocumentMoniker": "C:\\Users\\Ivo\\Documents\\4to cuatrimestre\\Proyecto Software\\Projecto Banco\\AccountRepo\\Application\\UseCases\\UserHttpService.cs",
-              "RelativeDocumentMoniker": "Application\\UseCases\\UserHttpService.cs",
-              "ToolTip": "C:\\Users\\Ivo\\Documents\\4to cuatrimestre\\Proyecto Software\\Projecto Banco\\AccountRepo\\Application\\UseCases\\UserHttpService.cs",
-              "RelativeToolTip": "Application\\UseCases\\UserHttpService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-05T22:32:03.322Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "AccountTypeServices.cs",
-              "DocumentMoniker": "C:\\Users\\Ivo\\Documents\\4to cuatrimestre\\Proyecto Software\\Projecto Banco\\AccountRepo\\Application\\UseCases\\AccountTypeServices.cs",
-              "RelativeDocumentMoniker": "Application\\UseCases\\AccountTypeServices.cs",
-              "ToolTip": "C:\\Users\\Ivo\\Documents\\4to cuatrimestre\\Proyecto Software\\Projecto Banco\\AccountRepo\\Application\\UseCases\\AccountTypeServices.cs",
-              "RelativeToolTip": "Application\\UseCases\\AccountTypeServices.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-05T22:15:45.268Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
               "Title": "AccountServices.cs",
               "DocumentMoniker": "C:\\Users\\Ivo\\Documents\\4to cuatrimestre\\Proyecto Software\\Projecto Banco\\AccountRepo\\Application\\UseCases\\AccountServices.cs",
               "RelativeDocumentMoniker": "Application\\UseCases\\AccountServices.cs",
               "ToolTip": "C:\\Users\\Ivo\\Documents\\4to cuatrimestre\\Proyecto Software\\Projecto Banco\\AccountRepo\\Application\\UseCases\\AccountServices.cs",
               "RelativeToolTip": "Application\\UseCases\\AccountServices.cs",
-              "ViewState": "AgIAADwBAAAAAAAAAAAAABcAAAA6AAAAAAAAAA==",
+              "ViewState": "AgIAAB4BAAAAAAAAAAAIwDUBAAAlAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-10-05T19:42:28.973Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "StateAccountServices.cs",
-              "DocumentMoniker": "C:\\Users\\Ivo\\Documents\\4to cuatrimestre\\Proyecto Software\\Projecto Banco\\AccountRepo\\Application\\UseCases\\StateAccountServices.cs",
-              "RelativeDocumentMoniker": "Application\\UseCases\\StateAccountServices.cs",
-              "ToolTip": "C:\\Users\\Ivo\\Documents\\4to cuatrimestre\\Proyecto Software\\Projecto Banco\\AccountRepo\\Application\\UseCases\\StateAccountServices.cs",
-              "RelativeToolTip": "Application\\UseCases\\StateAccountServices.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 1,
+              "Title": "AccountController.cs",
+              "DocumentMoniker": "C:\\Users\\Ivo\\Documents\\4to cuatrimestre\\Proyecto Software\\Projecto Banco\\AccountRepo\\Account.API\\Controllers\\AccountController.cs",
+              "RelativeDocumentMoniker": "Account.API\\Controllers\\AccountController.cs",
+              "ToolTip": "C:\\Users\\Ivo\\Documents\\4to cuatrimestre\\Proyecto Software\\Projecto Banco\\AccountRepo\\Account.API\\Controllers\\AccountController.cs",
+              "RelativeToolTip": "Account.API\\Controllers\\AccountController.cs",
+              "ViewState": "AgIAAH8AAAAAAAAAAAAIwIQAAAA0AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-05T22:31:58.681Z",
+              "WhenOpened": "2024-10-05T21:17:35.029Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "AccountResponse.cs",
+              "DocumentMoniker": "C:\\Users\\Ivo\\Documents\\4to cuatrimestre\\Proyecto Software\\Projecto Banco\\AccountRepo\\Application\\Response\\AccountResponse.cs",
+              "RelativeDocumentMoniker": "Application\\Response\\AccountResponse.cs",
+              "ToolTip": "C:\\Users\\Ivo\\Documents\\4to cuatrimestre\\Proyecto Software\\Projecto Banco\\AccountRepo\\Application\\Response\\AccountResponse.cs",
+              "RelativeToolTip": "Application\\Response\\AccountResponse.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAArAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-05T22:23:55.696Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "AccountDetailsResponse.cs",
+              "DocumentMoniker": "C:\\Users\\Ivo\\Documents\\4to cuatrimestre\\Proyecto Software\\Projecto Banco\\AccountRepo\\Application\\Response\\AccountDetailsResponse.cs",
+              "RelativeDocumentMoniker": "Application\\Response\\AccountDetailsResponse.cs",
+              "ToolTip": "C:\\Users\\Ivo\\Documents\\4to cuatrimestre\\Proyecto Software\\Projecto Banco\\AccountRepo\\Application\\Response\\AccountDetailsResponse.cs",
+              "RelativeToolTip": "Application\\Response\\AccountDetailsResponse.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAqwAoAAAAfAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-05T22:35:08.287Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "TransferProcess.cs",
+              "DocumentMoniker": "C:\\Users\\Ivo\\Documents\\4to cuatrimestre\\Proyecto Software\\Projecto Banco\\AccountRepo\\Application\\Response\\TransferProcess.cs",
+              "RelativeDocumentMoniker": "Application\\Response\\TransferProcess.cs",
+              "ToolTip": "C:\\Users\\Ivo\\Documents\\4to cuatrimestre\\Proyecto Software\\Projecto Banco\\AccountRepo\\Application\\Response\\TransferProcess.cs",
+              "RelativeToolTip": "Application\\Response\\TransferProcess.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAqwAoAAAAlAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-20T23:54:18.076Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 6,
-              "Title": "PersonalAccountServices.cs",
-              "DocumentMoniker": "C:\\Users\\Ivo\\Documents\\4to cuatrimestre\\Proyecto Software\\Projecto Banco\\AccountRepo\\Application\\UseCases\\PersonalAccountServices.cs",
-              "RelativeDocumentMoniker": "Application\\UseCases\\PersonalAccountServices.cs",
-              "ToolTip": "C:\\Users\\Ivo\\Documents\\4to cuatrimestre\\Proyecto Software\\Projecto Banco\\AccountRepo\\Application\\UseCases\\PersonalAccountServices.cs",
-              "RelativeToolTip": "Application\\UseCases\\PersonalAccountServices.cs",
+              "Title": "GenericResponse.cs",
+              "DocumentMoniker": "C:\\Users\\Ivo\\Documents\\4to cuatrimestre\\Proyecto Software\\Projecto Banco\\AccountRepo\\Application\\Response\\GenericResponse.cs",
+              "RelativeDocumentMoniker": "Application\\Response\\GenericResponse.cs",
+              "ToolTip": "C:\\Users\\Ivo\\Documents\\4to cuatrimestre\\Proyecto Software\\Projecto Banco\\AccountRepo\\Application\\Response\\GenericResponse.cs",
+              "RelativeToolTip": "Application\\Response\\GenericResponse.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-05T22:15:44.742Z",
+              "WhenOpened": "2024-10-05T22:58:07.875Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 7,
-              "Title": "AccountCommand.cs",
-              "DocumentMoniker": "C:\\Users\\Ivo\\Documents\\4to cuatrimestre\\Proyecto Software\\Projecto Banco\\AccountRepo\\Infrastructure\\Command\\AccountCommand.cs",
-              "RelativeDocumentMoniker": "Infrastructure\\Command\\AccountCommand.cs",
-              "ToolTip": "C:\\Users\\Ivo\\Documents\\4to cuatrimestre\\Proyecto Software\\Projecto Banco\\AccountRepo\\Infrastructure\\Command\\AccountCommand.cs",
-              "RelativeToolTip": "Infrastructure\\Command\\AccountCommand.cs",
-              "ViewState": "AgIAAAQAAAAAAAAAAAAiwBAAAAAJAAAAAAAAAA==",
+              "Title": "IAccountQuery.cs",
+              "DocumentMoniker": "C:\\Users\\Ivo\\Documents\\4to cuatrimestre\\Proyecto Software\\Projecto Banco\\AccountRepo\\Application\\Interfaces\\IAccountModel\\IAccountQuery.cs",
+              "RelativeDocumentMoniker": "Application\\Interfaces\\IAccountModel\\IAccountQuery.cs",
+              "ToolTip": "C:\\Users\\Ivo\\Documents\\4to cuatrimestre\\Proyecto Software\\Projecto Banco\\AccountRepo\\Application\\Interfaces\\IAccountModel\\IAccountQuery.cs",
+              "RelativeToolTip": "Application\\Interfaces\\IAccountModel\\IAccountQuery.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAvAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-05T23:28:58.897Z",
+              "WhenOpened": "2024-10-05T22:15:29.008Z",
               "EditorCaption": ""
             },
             {
@@ -292,123 +300,58 @@
             {
               "$type": "Document",
               "DocumentIndex": 9,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\Ivo\\Documents\\4to cuatrimestre\\Proyecto Software\\Projecto Banco\\AccountRepo\\Account.API\\Program.cs",
-              "RelativeDocumentMoniker": "Account.API\\Program.cs",
-              "ToolTip": "C:\\Users\\Ivo\\Documents\\4to cuatrimestre\\Proyecto Software\\Projecto Banco\\AccountRepo\\Account.API\\Program.cs",
-              "RelativeToolTip": "Account.API\\Program.cs",
-              "ViewState": "AgIAAAwAAAAAAAAAAAAAAB8AAAAyAAAAAAAAAA==",
+              "Title": "AccountTypeServices.cs",
+              "DocumentMoniker": "C:\\Users\\Ivo\\Documents\\4to cuatrimestre\\Proyecto Software\\Projecto Banco\\AccountRepo\\Application\\UseCases\\AccountTypeServices.cs",
+              "RelativeDocumentMoniker": "Application\\UseCases\\AccountTypeServices.cs",
+              "ToolTip": "C:\\Users\\Ivo\\Documents\\4to cuatrimestre\\Proyecto Software\\Projecto Banco\\AccountRepo\\Application\\UseCases\\AccountTypeServices.cs",
+              "RelativeToolTip": "Application\\UseCases\\AccountTypeServices.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-06T01:09:22.319Z",
+              "WhenOpened": "2024-10-05T22:15:45.268Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 10,
-              "Title": "AccountTypeController.cs",
-              "DocumentMoniker": "C:\\Users\\Ivo\\Documents\\4to cuatrimestre\\Proyecto Software\\Projecto Banco\\AccountRepo\\Account.API\\Controllers\\AccountTypeController.cs",
-              "RelativeDocumentMoniker": "Account.API\\Controllers\\AccountTypeController.cs",
-              "ToolTip": "C:\\Users\\Ivo\\Documents\\4to cuatrimestre\\Proyecto Software\\Projecto Banco\\AccountRepo\\Account.API\\Controllers\\AccountTypeController.cs",
-              "RelativeToolTip": "Account.API\\Controllers\\AccountTypeController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABkAAABJAAAAAAAAAA==",
+              "Title": "PersonalAccountServices.cs",
+              "DocumentMoniker": "C:\\Users\\Ivo\\Documents\\4to cuatrimestre\\Proyecto Software\\Projecto Banco\\AccountRepo\\Application\\UseCases\\PersonalAccountServices.cs",
+              "RelativeDocumentMoniker": "Application\\UseCases\\PersonalAccountServices.cs",
+              "ToolTip": "C:\\Users\\Ivo\\Documents\\4to cuatrimestre\\Proyecto Software\\Projecto Banco\\AccountRepo\\Application\\UseCases\\PersonalAccountServices.cs",
+              "RelativeToolTip": "Application\\UseCases\\PersonalAccountServices.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-05T22:31:50.565Z",
+              "WhenOpened": "2024-10-05T22:15:44.742Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 11,
-              "Title": "AccountController.cs",
-              "DocumentMoniker": "C:\\Users\\Ivo\\Documents\\4to cuatrimestre\\Proyecto Software\\Projecto Banco\\AccountRepo\\Account.API\\Controllers\\AccountController.cs",
-              "RelativeDocumentMoniker": "Account.API\\Controllers\\AccountController.cs",
-              "ToolTip": "C:\\Users\\Ivo\\Documents\\4to cuatrimestre\\Proyecto Software\\Projecto Banco\\AccountRepo\\Account.API\\Controllers\\AccountController.cs",
-              "RelativeToolTip": "Account.API\\Controllers\\AccountController.cs",
-              "ViewState": "AgIAAAkAAAAAAAAAAAAAACIAAAAQAAAAAAAAAA==",
+              "Title": "TransferResponse.cs",
+              "DocumentMoniker": "C:\\Users\\Ivo\\Documents\\4to cuatrimestre\\Proyecto Software\\Projecto Banco\\AccountRepo\\Application\\Response\\TransferResponse.cs",
+              "RelativeDocumentMoniker": "Application\\Response\\TransferResponse.cs",
+              "ToolTip": "C:\\Users\\Ivo\\Documents\\4to cuatrimestre\\Proyecto Software\\Projecto Banco\\AccountRepo\\Application\\Response\\TransferResponse.cs",
+              "RelativeToolTip": "Application\\Response\\TransferResponse.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-05T21:17:35.029Z",
+              "WhenOpened": "2024-10-20T23:59:20.585Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 12,
-              "Title": "TypeCurrencyController.cs",
-              "DocumentMoniker": "C:\\Users\\Ivo\\Documents\\4to cuatrimestre\\Proyecto Software\\Projecto Banco\\AccountRepo\\Account.API\\Controllers\\TypeCurrencyController.cs",
-              "RelativeDocumentMoniker": "Account.API\\Controllers\\TypeCurrencyController.cs",
-              "ToolTip": "C:\\Users\\Ivo\\Documents\\4to cuatrimestre\\Proyecto Software\\Projecto Banco\\AccountRepo\\Account.API\\Controllers\\TypeCurrencyController.cs",
-              "RelativeToolTip": "Account.API\\Controllers\\TypeCurrencyController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAABUAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-10T23:14:14.115Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "StateAccountController.cs",
-              "DocumentMoniker": "C:\\Users\\Ivo\\Documents\\4to cuatrimestre\\Proyecto Software\\Projecto Banco\\AccountRepo\\Account.API\\Controllers\\StateAccountController.cs",
-              "RelativeDocumentMoniker": "Account.API\\Controllers\\StateAccountController.cs",
-              "ToolTip": "C:\\Users\\Ivo\\Documents\\4to cuatrimestre\\Proyecto Software\\Projecto Banco\\AccountRepo\\Account.API\\Controllers\\StateAccountController.cs",
-              "RelativeToolTip": "Account.API\\Controllers\\StateAccountController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAAxAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-05T22:31:49.868Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 22,
-              "Title": "AccountDetailsResponse.cs",
-              "DocumentMoniker": "C:\\Users\\Ivo\\Documents\\4to cuatrimestre\\Proyecto Software\\Projecto Banco\\AccountRepo\\Application\\Response\\AccountDetailsResponse.cs",
-              "RelativeDocumentMoniker": "Application\\Response\\AccountDetailsResponse.cs",
-              "ToolTip": "C:\\Users\\Ivo\\Documents\\4to cuatrimestre\\Proyecto Software\\Projecto Banco\\AccountRepo\\Application\\Response\\AccountDetailsResponse.cs",
-              "RelativeToolTip": "Application\\Response\\AccountDetailsResponse.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAqwAoAAAAfAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-05T22:35:08.287Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 14,
-              "Title": "log20241009.txt",
-              "DocumentMoniker": "C:\\Users\\Ivo\\Documents\\4to cuatrimestre\\Proyecto Software\\Projecto Banco\\AccountRepo\\Account.API\\logs\\log20241009.txt",
-              "RelativeDocumentMoniker": "Account.API\\logs\\log20241009.txt",
-              "ToolTip": "C:\\Users\\Ivo\\Documents\\4to cuatrimestre\\Proyecto Software\\Projecto Banco\\AccountRepo\\Account.API\\logs\\log20241009.txt",
-              "RelativeToolTip": "Account.API\\logs\\log20241009.txt",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003109|",
-              "WhenOpened": "2024-10-09T21:22:32.639Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 15,
-              "Title": "IAccountServices.cs",
-              "DocumentMoniker": "C:\\Users\\Ivo\\Documents\\4to cuatrimestre\\Proyecto Software\\Projecto Banco\\AccountRepo\\Application\\Interfaces\\IAccountModel\\IAccountServices.cs",
-              "RelativeDocumentMoniker": "Application\\Interfaces\\IAccountModel\\IAccountServices.cs",
-              "ToolTip": "C:\\Users\\Ivo\\Documents\\4to cuatrimestre\\Proyecto Software\\Projecto Banco\\AccountRepo\\Application\\Interfaces\\IAccountModel\\IAccountServices.cs",
-              "RelativeToolTip": "Application\\Interfaces\\IAccountModel\\IAccountServices.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-05T21:14:55.341Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 17,
               "Title": "AccountModel.cs",
               "DocumentMoniker": "C:\\Users\\Ivo\\Documents\\4to cuatrimestre\\Proyecto Software\\Projecto Banco\\AccountRepo\\Domain\\Models\\AccountModel.cs",
               "RelativeDocumentMoniker": "Domain\\Models\\AccountModel.cs",
               "ToolTip": "C:\\Users\\Ivo\\Documents\\4to cuatrimestre\\Proyecto Software\\Projecto Banco\\AccountRepo\\Domain\\Models\\AccountModel.cs",
               "RelativeToolTip": "Domain\\Models\\AccountModel.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAA2AAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-10-05T23:35:34.702Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 23,
+              "DocumentIndex": 13,
               "Title": "TypeCurrency.cs",
               "DocumentMoniker": "C:\\Users\\Ivo\\Documents\\4to cuatrimestre\\Proyecto Software\\Projecto Banco\\AccountRepo\\Domain\\Models\\TypeCurrency.cs",
               "RelativeDocumentMoniker": "Domain\\Models\\TypeCurrency.cs",
@@ -421,7 +364,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 24,
+              "DocumentIndex": 14,
               "Title": "StateAccount.cs",
               "DocumentMoniker": "C:\\Users\\Ivo\\Documents\\4to cuatrimestre\\Proyecto Software\\Projecto Banco\\AccountRepo\\Domain\\Models\\StateAccount.cs",
               "RelativeDocumentMoniker": "Domain\\Models\\StateAccount.cs",
@@ -434,72 +377,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
-              "Title": "IAccountQuery.cs",
-              "DocumentMoniker": "C:\\Users\\Ivo\\Documents\\4to cuatrimestre\\Proyecto Software\\Projecto Banco\\AccountRepo\\Application\\Interfaces\\IAccountModel\\IAccountQuery.cs",
-              "RelativeDocumentMoniker": "Application\\Interfaces\\IAccountModel\\IAccountQuery.cs",
-              "ToolTip": "C:\\Users\\Ivo\\Documents\\4to cuatrimestre\\Proyecto Software\\Projecto Banco\\AccountRepo\\Application\\Interfaces\\IAccountModel\\IAccountQuery.cs",
-              "RelativeToolTip": "Application\\Interfaces\\IAccountModel\\IAccountQuery.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAvAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-05T22:15:29.008Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 18,
-              "Title": "PersonalAccountResponse.cs",
-              "DocumentMoniker": "C:\\Users\\Ivo\\Documents\\4to cuatrimestre\\Proyecto Software\\Projecto Banco\\AccountRepo\\Application\\Response\\PersonalAccountResponse.cs",
-              "RelativeDocumentMoniker": "Application\\Response\\PersonalAccountResponse.cs",
-              "ToolTip": "C:\\Users\\Ivo\\Documents\\4to cuatrimestre\\Proyecto Software\\Projecto Banco\\AccountRepo\\Application\\Response\\PersonalAccountResponse.cs",
-              "RelativeToolTip": "Application\\Response\\PersonalAccountResponse.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-05T23:49:21.275Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 20,
-              "Title": "AccountBalanceRequest.cs",
-              "DocumentMoniker": "C:\\Users\\Ivo\\Documents\\4to cuatrimestre\\Proyecto Software\\Projecto Banco\\AccountRepo\\Application\\Request\\AccountBalanceRequest.cs",
-              "RelativeDocumentMoniker": "Application\\Request\\AccountBalanceRequest.cs",
-              "ToolTip": "C:\\Users\\Ivo\\Documents\\4to cuatrimestre\\Proyecto Software\\Projecto Banco\\AccountRepo\\Application\\Request\\AccountBalanceRequest.cs",
-              "RelativeToolTip": "Application\\Request\\AccountBalanceRequest.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-05T22:10:57.116Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 19,
-              "Title": "GenericResponse.cs",
-              "DocumentMoniker": "C:\\Users\\Ivo\\Documents\\4to cuatrimestre\\Proyecto Software\\Projecto Banco\\AccountRepo\\Application\\Response\\GenericResponse.cs",
-              "RelativeDocumentMoniker": "Application\\Response\\GenericResponse.cs",
-              "ToolTip": "C:\\Users\\Ivo\\Documents\\4to cuatrimestre\\Proyecto Software\\Projecto Banco\\AccountRepo\\Application\\Response\\GenericResponse.cs",
-              "RelativeToolTip": "Application\\Response\\GenericResponse.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-05T22:58:07.875Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 21,
-              "Title": "AccountResponse.cs",
-              "DocumentMoniker": "C:\\Users\\Ivo\\Documents\\4to cuatrimestre\\Proyecto Software\\Projecto Banco\\AccountRepo\\Application\\Response\\AccountResponse.cs",
-              "RelativeDocumentMoniker": "Application\\Response\\AccountResponse.cs",
-              "ToolTip": "C:\\Users\\Ivo\\Documents\\4to cuatrimestre\\Proyecto Software\\Projecto Banco\\AccountRepo\\Application\\Response\\AccountResponse.cs",
-              "RelativeToolTip": "Application\\Response\\AccountResponse.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAXAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-05T22:23:55.696Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 25,
+              "DocumentIndex": 15,
               "Title": "PersonalAccount.cs",
               "DocumentMoniker": "C:\\Users\\Ivo\\Documents\\4to cuatrimestre\\Proyecto Software\\Projecto Banco\\AccountRepo\\Domain\\Models\\PersonalAccount.cs",
               "RelativeDocumentMoniker": "Domain\\Models\\PersonalAccount.cs",
@@ -512,7 +390,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 26,
+              "DocumentIndex": 16,
               "Title": "AccountType.cs",
               "DocumentMoniker": "C:\\Users\\Ivo\\Documents\\4to cuatrimestre\\Proyecto Software\\Projecto Banco\\AccountRepo\\Domain\\Models\\AccountType.cs",
               "RelativeDocumentMoniker": "Domain\\Models\\AccountType.cs",
@@ -525,7 +403,165 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "appsettings.Development.json",
+              "DocumentMoniker": "C:\\Users\\Ivo\\Documents\\4to cuatrimestre\\Proyecto Software\\Projecto Banco\\AccountRepo\\Account.API\\appsettings.Development.json",
+              "RelativeDocumentMoniker": "Account.API\\appsettings.Development.json",
+              "ToolTip": "C:\\Users\\Ivo\\Documents\\4to cuatrimestre\\Proyecto Software\\Projecto Banco\\AccountRepo\\Account.API\\appsettings.Development.json",
+              "RelativeToolTip": "Account.API\\appsettings.Development.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAA6AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-10-05T19:05:31.605Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "TransferHttpService.cs",
+              "DocumentMoniker": "C:\\Users\\Ivo\\Documents\\4to cuatrimestre\\Proyecto Software\\Projecto Banco\\AccountRepo\\Application\\UseCases\\TransferHttpService.cs",
+              "RelativeDocumentMoniker": "Application\\UseCases\\TransferHttpService.cs",
+              "ToolTip": "C:\\Users\\Ivo\\Documents\\4to cuatrimestre\\Proyecto Software\\Projecto Banco\\AccountRepo\\Application\\UseCases\\TransferHttpService.cs",
+              "RelativeToolTip": "Application\\UseCases\\TransferHttpService.cs",
+              "ViewState": "AgIAAB8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-05T22:32:01.378Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "TypeCurrencyServices.cs",
+              "DocumentMoniker": "C:\\Users\\Ivo\\Documents\\4to cuatrimestre\\Proyecto Software\\Projecto Banco\\AccountRepo\\Application\\UseCases\\TypeCurrencyServices.cs",
+              "RelativeDocumentMoniker": "Application\\UseCases\\TypeCurrencyServices.cs",
+              "ToolTip": "C:\\Users\\Ivo\\Documents\\4to cuatrimestre\\Proyecto Software\\Projecto Banco\\AccountRepo\\Application\\UseCases\\TypeCurrencyServices.cs",
+              "RelativeToolTip": "Application\\UseCases\\TypeCurrencyServices.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-05T22:32:03.566Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "AccountCommand.cs",
+              "DocumentMoniker": "C:\\Users\\Ivo\\Documents\\4to cuatrimestre\\Proyecto Software\\Projecto Banco\\AccountRepo\\Infrastructure\\Command\\AccountCommand.cs",
+              "RelativeDocumentMoniker": "Infrastructure\\Command\\AccountCommand.cs",
+              "ToolTip": "C:\\Users\\Ivo\\Documents\\4to cuatrimestre\\Proyecto Software\\Projecto Banco\\AccountRepo\\Infrastructure\\Command\\AccountCommand.cs",
+              "RelativeToolTip": "Infrastructure\\Command\\AccountCommand.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAABAAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-05T23:28:58.897Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "UserHttpService.cs",
+              "DocumentMoniker": "C:\\Users\\Ivo\\Documents\\4to cuatrimestre\\Proyecto Software\\Projecto Banco\\AccountRepo\\Application\\UseCases\\UserHttpService.cs",
+              "RelativeDocumentMoniker": "Application\\UseCases\\UserHttpService.cs",
+              "ToolTip": "C:\\Users\\Ivo\\Documents\\4to cuatrimestre\\Proyecto Software\\Projecto Banco\\AccountRepo\\Application\\UseCases\\UserHttpService.cs",
+              "RelativeToolTip": "Application\\UseCases\\UserHttpService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-05T22:32:03.322Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "StateAccountServices.cs",
+              "DocumentMoniker": "C:\\Users\\Ivo\\Documents\\4to cuatrimestre\\Proyecto Software\\Projecto Banco\\AccountRepo\\Application\\UseCases\\StateAccountServices.cs",
+              "RelativeDocumentMoniker": "Application\\UseCases\\StateAccountServices.cs",
+              "ToolTip": "C:\\Users\\Ivo\\Documents\\4to cuatrimestre\\Proyecto Software\\Projecto Banco\\AccountRepo\\Application\\UseCases\\StateAccountServices.cs",
+              "RelativeToolTip": "Application\\UseCases\\StateAccountServices.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-05T22:31:58.681Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\Ivo\\Documents\\4to cuatrimestre\\Proyecto Software\\Projecto Banco\\AccountRepo\\Account.API\\Program.cs",
+              "RelativeDocumentMoniker": "Account.API\\Program.cs",
+              "ToolTip": "C:\\Users\\Ivo\\Documents\\4to cuatrimestre\\Proyecto Software\\Projecto Banco\\AccountRepo\\Account.API\\Program.cs",
+              "RelativeToolTip": "Account.API\\Program.cs",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAAAB8AAAAyAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-06T01:09:22.319Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "AccountTypeController.cs",
+              "DocumentMoniker": "C:\\Users\\Ivo\\Documents\\4to cuatrimestre\\Proyecto Software\\Projecto Banco\\AccountRepo\\Account.API\\Controllers\\AccountTypeController.cs",
+              "RelativeDocumentMoniker": "Account.API\\Controllers\\AccountTypeController.cs",
+              "ToolTip": "C:\\Users\\Ivo\\Documents\\4to cuatrimestre\\Proyecto Software\\Projecto Banco\\AccountRepo\\Account.API\\Controllers\\AccountTypeController.cs",
+              "RelativeToolTip": "Account.API\\Controllers\\AccountTypeController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABkAAABJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-05T22:31:50.565Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
+              "Title": "TypeCurrencyController.cs",
+              "DocumentMoniker": "C:\\Users\\Ivo\\Documents\\4to cuatrimestre\\Proyecto Software\\Projecto Banco\\AccountRepo\\Account.API\\Controllers\\TypeCurrencyController.cs",
+              "RelativeDocumentMoniker": "Account.API\\Controllers\\TypeCurrencyController.cs",
+              "ToolTip": "C:\\Users\\Ivo\\Documents\\4to cuatrimestre\\Proyecto Software\\Projecto Banco\\AccountRepo\\Account.API\\Controllers\\TypeCurrencyController.cs",
+              "RelativeToolTip": "Account.API\\Controllers\\TypeCurrencyController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAABUAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-10T23:14:14.115Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 26,
+              "Title": "StateAccountController.cs",
+              "DocumentMoniker": "C:\\Users\\Ivo\\Documents\\4to cuatrimestre\\Proyecto Software\\Projecto Banco\\AccountRepo\\Account.API\\Controllers\\StateAccountController.cs",
+              "RelativeDocumentMoniker": "Account.API\\Controllers\\StateAccountController.cs",
+              "ToolTip": "C:\\Users\\Ivo\\Documents\\4to cuatrimestre\\Proyecto Software\\Projecto Banco\\AccountRepo\\Account.API\\Controllers\\StateAccountController.cs",
+              "RelativeToolTip": "Account.API\\Controllers\\StateAccountController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAAxAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-05T22:31:49.868Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 27,
+              "Title": "log20241009.txt",
+              "DocumentMoniker": "C:\\Users\\Ivo\\Documents\\4to cuatrimestre\\Proyecto Software\\Projecto Banco\\AccountRepo\\Account.API\\logs\\log20241009.txt",
+              "RelativeDocumentMoniker": "Account.API\\logs\\log20241009.txt",
+              "ToolTip": "C:\\Users\\Ivo\\Documents\\4to cuatrimestre\\Proyecto Software\\Projecto Banco\\AccountRepo\\Account.API\\logs\\log20241009.txt",
+              "RelativeToolTip": "Account.API\\logs\\log20241009.txt",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003109|",
+              "WhenOpened": "2024-10-09T21:22:32.639Z"
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 28,
+              "Title": "PersonalAccountResponse.cs",
+              "DocumentMoniker": "C:\\Users\\Ivo\\Documents\\4to cuatrimestre\\Proyecto Software\\Projecto Banco\\AccountRepo\\Application\\Response\\PersonalAccountResponse.cs",
+              "RelativeDocumentMoniker": "Application\\Response\\PersonalAccountResponse.cs",
+              "ToolTip": "C:\\Users\\Ivo\\Documents\\4to cuatrimestre\\Proyecto Software\\Projecto Banco\\AccountRepo\\Application\\Response\\PersonalAccountResponse.cs",
+              "RelativeToolTip": "Application\\Response\\PersonalAccountResponse.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-05T23:49:21.275Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 29,
+              "Title": "AccountBalanceRequest.cs",
+              "DocumentMoniker": "C:\\Users\\Ivo\\Documents\\4to cuatrimestre\\Proyecto Software\\Projecto Banco\\AccountRepo\\Application\\Request\\AccountBalanceRequest.cs",
+              "RelativeDocumentMoniker": "Application\\Request\\AccountBalanceRequest.cs",
+              "ToolTip": "C:\\Users\\Ivo\\Documents\\4to cuatrimestre\\Proyecto Software\\Projecto Banco\\AccountRepo\\Application\\Request\\AccountBalanceRequest.cs",
+              "RelativeToolTip": "Application\\Request\\AccountBalanceRequest.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-05T22:10:57.116Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 31,
               "Title": "PersonalAccountCommand.cs",
               "DocumentMoniker": "C:\\Users\\Ivo\\Documents\\4to cuatrimestre\\Proyecto Software\\Projecto Banco\\AccountRepo\\Infrastructure\\Command\\PersonalAccountCommand.cs",
               "RelativeDocumentMoniker": "Infrastructure\\Command\\PersonalAccountCommand.cs",
@@ -533,12 +569,11 @@
               "RelativeToolTip": "Infrastructure\\Command\\PersonalAccountCommand.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-05T23:31:02.638Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-05T23:31:02.638Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 29,
+              "DocumentIndex": 32,
               "Title": "StateAccountQuery.cs",
               "DocumentMoniker": "C:\\Users\\Ivo\\Documents\\4to cuatrimestre\\Proyecto Software\\Projecto Banco\\AccountRepo\\Infrastructure\\Query\\StateAccountQuery.cs",
               "RelativeDocumentMoniker": "Infrastructure\\Query\\StateAccountQuery.cs",
@@ -546,12 +581,11 @@
               "RelativeToolTip": "Infrastructure\\Query\\StateAccountQuery.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-05T23:24:48.659Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-05T23:24:48.659Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 30,
+              "DocumentIndex": 33,
               "Title": "TypeCurrencyQuery.cs",
               "DocumentMoniker": "C:\\Users\\Ivo\\Documents\\4to cuatrimestre\\Proyecto Software\\Projecto Banco\\AccountRepo\\Infrastructure\\Query\\TypeCurrencyQuery.cs",
               "RelativeDocumentMoniker": "Infrastructure\\Query\\TypeCurrencyQuery.cs",
@@ -559,12 +593,11 @@
               "RelativeToolTip": "Infrastructure\\Query\\TypeCurrencyQuery.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-05T23:24:47.374Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-05T23:24:47.374Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 27,
+              "DocumentIndex": 30,
               "Title": "AccountQuery.cs",
               "DocumentMoniker": "C:\\Users\\Ivo\\Documents\\4to cuatrimestre\\Proyecto Software\\Projecto Banco\\AccountRepo\\Infrastructure\\Query\\AccountQuery.cs",
               "RelativeDocumentMoniker": "Infrastructure\\Query\\AccountQuery.cs",
@@ -572,12 +605,11 @@
               "RelativeToolTip": "Infrastructure\\Query\\AccountQuery.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAACYAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-05T23:11:34.797Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-05T23:11:34.797Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 31,
+              "DocumentIndex": 34,
               "Title": "ITypeCurrencyQuery.cs",
               "DocumentMoniker": "C:\\Users\\Ivo\\Documents\\4to cuatrimestre\\Proyecto Software\\Projecto Banco\\AccountRepo\\Application\\Interfaces\\ITypeCurrency\\ITypeCurrencyQuery.cs",
               "RelativeDocumentMoniker": "Application\\Interfaces\\ITypeCurrency\\ITypeCurrencyQuery.cs",
@@ -585,12 +617,11 @@
               "RelativeToolTip": "Application\\Interfaces\\ITypeCurrency\\ITypeCurrencyQuery.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-05T23:24:33.965Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-05T23:24:33.965Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 32,
+              "DocumentIndex": 35,
               "Title": "AccountCreateRequest.cs",
               "DocumentMoniker": "C:\\Users\\Ivo\\Documents\\4to cuatrimestre\\Proyecto Software\\Projecto Banco\\AccountRepo\\Application\\Request\\AccountCreateRequest.cs",
               "RelativeDocumentMoniker": "Application\\Request\\AccountCreateRequest.cs",
@@ -598,12 +629,11 @@
               "RelativeToolTip": "Application\\Request\\AccountCreateRequest.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-05T22:11:16.12Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-05T22:11:16.12Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 34,
+              "DocumentIndex": 37,
               "Title": "AccountUpdateRequest.cs",
               "DocumentMoniker": "C:\\Users\\Ivo\\Documents\\4to cuatrimestre\\Proyecto Software\\Projecto Banco\\AccountRepo\\Application\\Request\\AccountUpdateRequest.cs",
               "RelativeDocumentMoniker": "Application\\Request\\AccountUpdateRequest.cs",
@@ -611,12 +641,11 @@
               "RelativeToolTip": "Application\\Request\\AccountUpdateRequest.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-05T22:32:14.936Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-05T22:32:14.936Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 33,
+              "DocumentIndex": 36,
               "Title": "PersonalAccountRequest.cs",
               "DocumentMoniker": "C:\\Users\\Ivo\\Documents\\4to cuatrimestre\\Proyecto Software\\Projecto Banco\\AccountRepo\\Application\\Request\\PersonalAccountRequest.cs",
               "RelativeDocumentMoniker": "Application\\Request\\PersonalAccountRequest.cs",
@@ -624,12 +653,11 @@
               "RelativeToolTip": "Application\\Request\\PersonalAccountRequest.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-05T22:32:17.96Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-05T22:32:17.96Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 35,
+              "DocumentIndex": 38,
               "Title": "Conflict.cs",
               "DocumentMoniker": "C:\\Users\\Ivo\\Documents\\4to cuatrimestre\\Proyecto Software\\Projecto Banco\\AccountRepo\\Application\\Exceptions\\Conflict.cs",
               "RelativeDocumentMoniker": "Application\\Exceptions\\Conflict.cs",
@@ -637,12 +665,11 @@
               "RelativeToolTip": "Application\\Exceptions\\Conflict.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-05T22:30:39.949Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-05T22:30:39.949Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 36,
+              "DocumentIndex": 39,
               "Title": "ApiError.cs",
               "DocumentMoniker": "C:\\Users\\Ivo\\Documents\\4to cuatrimestre\\Proyecto Software\\Projecto Banco\\AccountRepo\\Application\\Exceptions\\ApiError.cs",
               "RelativeDocumentMoniker": "Application\\Exceptions\\ApiError.cs",
@@ -650,12 +677,11 @@
               "RelativeToolTip": "Application\\Exceptions\\ApiError.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-05T22:30:41.175Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-05T22:30:41.175Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 37,
+              "DocumentIndex": 40,
               "Title": "ExceptionNotFound.cs",
               "DocumentMoniker": "C:\\Users\\Ivo\\Documents\\4to cuatrimestre\\Proyecto Software\\Projecto Banco\\AccountRepo\\Application\\Exceptions\\ExceptionNotFound.cs",
               "RelativeDocumentMoniker": "Application\\Exceptions\\ExceptionNotFound.cs",
@@ -663,12 +689,11 @@
               "RelativeToolTip": "Application\\Exceptions\\ExceptionNotFound.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-05T22:30:36.028Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-05T22:30:36.028Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 39,
+              "DocumentIndex": 41,
               "Title": "20241005190728_init.cs",
               "DocumentMoniker": "C:\\Users\\Ivo\\Documents\\4to cuatrimestre\\Proyecto Software\\Projecto Banco\\AccountRepo\\Infrastructure\\Migrations\\20241005190728_init.cs",
               "RelativeDocumentMoniker": "Infrastructure\\Migrations\\20241005190728_init.cs",
@@ -676,21 +701,7 @@
               "RelativeToolTip": "Infrastructure\\Migrations\\20241005190728_init.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-05T19:07:28.509Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 38,
-              "Title": "appsettings.Development.json",
-              "DocumentMoniker": "C:\\Users\\Ivo\\Documents\\4to cuatrimestre\\Proyecto Software\\Projecto Banco\\AccountRepo\\Account.API\\appsettings.Development.json",
-              "RelativeDocumentMoniker": "Account.API\\appsettings.Development.json",
-              "ToolTip": "C:\\Users\\Ivo\\Documents\\4to cuatrimestre\\Proyecto Software\\Projecto Banco\\AccountRepo\\Account.API\\appsettings.Development.json",
-              "RelativeToolTip": "Account.API\\appsettings.Development.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2024-10-05T19:05:31.605Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-05T19:07:28.509Z"
             }
           ]
         }

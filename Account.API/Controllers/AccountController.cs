@@ -2,6 +2,7 @@
 using Application.Request;
 using Application.Response;
 using Microsoft.AspNetCore.Mvc;
+using System.Security.Cryptography.Xml;
 
 namespace Account.API.Controllers
 {
@@ -129,7 +130,7 @@ namespace Account.API.Controllers
 
         }
         [HttpPut("Update/Balance")]
-        [ProducesResponseType(200)]
+        [ProducesResponseType(typeof(TransferProcess), 200)]
         [ProducesResponseType(404)]
         public async Task<IActionResult> UpdateBalancee(Guid accountId, AccountBalanceRequest balance)
         {
@@ -144,8 +145,9 @@ namespace Account.API.Controllers
 
             try
             {
-                bool result = await _accountServices.UpdateBalance(accountId, balance);
-                if (!result)
+                var result = await _accountServices.UpdateBalance(accountId, balance);
+
+                if (result == null)
                 {
                     _logger.LogInformation("Account not found {Time}", DateTime.UtcNow);
 
@@ -154,7 +156,7 @@ namespace Account.API.Controllers
 
                 _logger.LogInformation("Account balance updated {Time}", DateTime.UtcNow);
 
-                return Ok();
+                return Ok(result);
             }
             catch (Exception ex)
             {

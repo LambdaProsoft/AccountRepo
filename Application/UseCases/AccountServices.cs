@@ -65,13 +65,14 @@ namespace Application.UseCases
 
             string alias = await GenerateAlias();
 
+            var newAccountId = Guid.NewGuid();
             var account = new AccountModel
             {
-                AccountId = Guid.NewGuid(),
+                AccountId = newAccountId,
                 CBU = cbu,
                 Alias = alias,
                 NumberAccount = accountNumber,
-                Balance = 0,  // Arranca con plata en 0 a menos definamos promos (sugerencia lucas)
+                Balance = 10000,  // Arranca con plata en 0 a menos definamos promos (sugerencia lucas)
                 UserId = accountRequest.User,
                 AccTypeId = accountRequest.AccountType,
                 CurrencyId = accountRequest.Currency,
@@ -84,6 +85,7 @@ namespace Application.UseCases
 
             var response = new AccountResponse
             {
+                AccountId = newAccountId,
                 CBU = account.CBU,
                 Alias = account.Alias,
                 NumeroDeCuenta = account.NumberAccount,
@@ -196,6 +198,7 @@ namespace Application.UseCases
             {
                 Account = new AccountResponse
                 {
+                    AccountId = account.AccountId,
                     CBU = account.CBU,
                     Alias = account.Alias,
                     NumeroDeCuenta = account.NumberAccount,
@@ -252,6 +255,7 @@ namespace Application.UseCases
 
             var response = new AccountResponse
             {
+                AccountId = account.AccountId,
                 CBU = account.CBU,
                 Alias = account.Alias,
                 NumeroDeCuenta = account.NumberAccount,
@@ -285,6 +289,7 @@ namespace Application.UseCases
 
             var response = new AccountResponse
             {
+                AccountId = account.AccountId,
                 CBU = account.CBU,
                 Alias = account.Alias,
                 NumeroDeCuenta = account.NumberAccount,
@@ -297,22 +302,24 @@ namespace Application.UseCases
             return response;
         }
 
-        public async Task<bool> UpdateBalance(Guid id, AccountBalanceRequest balance)
+        public async Task<TransferProcess> UpdateBalance(Guid id, AccountBalanceRequest balance)
         {
             var account = await _accountQuery.GetAccountById(id);
             if (account == null)
             {
-                return false;
+                return null;         
             }
             else
             {
                 _logger.LogInformation("Updating balance account {Time}", DateTime.UtcNow);
                 await _accountCommand.UpdateBalance(id, balance.Balance);
-                return true;
+                return new TransferProcess
+                {
+                    TransferCompleted = true,
+                };
             }
-
         }
-
+        
         public async Task<AccountDetailsResponse> GetByUserId(int userId)
         {
             //verifica que el usuario tenga una cuenta
@@ -339,6 +346,7 @@ namespace Application.UseCases
             {
                 Account = new AccountResponse
                 {
+                    AccountId = account.AccountId,
                     CBU = account.CBU,
                     Alias = account.Alias,
                     NumeroDeCuenta = account.NumberAccount,
