@@ -64,6 +64,18 @@ builder.Services.AddScoped<IStateAccountServices, StateAccountServices>();
 builder.Services.AddScoped<ITypeCurrencyQuery, TypeCurrencyQuery>();
 builder.Services.AddScoped<ITypeCurrencyServices, TypeCurrencyServices>();
 
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy("AllowAll", builder =>
+    {
+        builder.AllowAnyOrigin()
+               .AllowAnyMethod()
+               .AllowAnyHeader();
+    });
+});
+
+
+
 var app = builder.Build();
 
 Log.Logger.Information("Web API is configured and ready to handle requests.");
@@ -81,4 +93,5 @@ app.UseAuthorization();
 
 app.MapControllers();
 
+app.UseCors("AllowAll");
 app.Run();
