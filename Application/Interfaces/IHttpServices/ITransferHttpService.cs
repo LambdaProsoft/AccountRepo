@@ -9,9 +9,7 @@ namespace Application.Interfaces.IHttpServices
 {
     public interface ITransferHttpService
     {
-        //Task<List<TransferResponse>> GetAllTransfersByAccount(Guid accountId);
+        Task<List<TransferResponse>> GetAllTransfersByAccount(Guid accountId);
 
-        //Metodo de prueba
-        List<TransferResponse> GetAllTransfersByAccount(Guid accountId);
     }
 }

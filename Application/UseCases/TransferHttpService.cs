@@ -18,45 +18,17 @@ namespace Application.UseCases
             _httpClient = httpClient;
         }
 
-        public /*async Task<List<TransferResponse>>*/ List<TransferResponse> GetAllTransfersByAccount(Guid accountId)
+        public async Task<List<TransferResponse>> GetAllTransfersByAccount(Guid accountId)
         {
-            /* 
-            var response = await _httpClient.GetAsync($"http://localhost/api/Transfer/{accountId}");
+            
+            var response = await _httpClient.GetAsync($"https://localhost:7045/api/Transfer/{accountId}/Accounts");
             if (response.IsSuccessStatusCode)
             {
                 return await response.Content.ReadFromJsonAsync<List<TransferResponse>>();
             }
 
             return null; //Manejar de forma correcta
-            */
-
-            //Datos ficticios de prueba
-            var transferResponse = new List<TransferResponse>
-            {
-                new TransferResponse
-                {
-                    Id = 1,
-                    Amount = 1500,
-                    Date = DateTime.Now,
-                    Status = "Done"
-                },
-                new TransferResponse
-                {
-                    Id = 2,
-                    Amount = 10000,
-                    Date = DateTime.Today,
-                    Status = "Done"
-                },
-                new TransferResponse
-                {
-                    Id = 3,
-                    Amount = 2156,
-                    Date = new DateTime(2024, 10, 10, 0, 0, 0, DateTimeKind.Utc),
-                    Status = "Cancel"
-                }
-            };
-
-            return transferResponse;
+            
         }
     }
 }

@@ -20,7 +20,7 @@ namespace Application.UseCases
         public async Task<UserResponse> GetUserById(int userId)
         {
             var response = await _httpClient.GetAsync($"https://localhost:7160/api/User/{userId}");
-            var x = 1;
+            //var x = 1;
             if (response.IsSuccessStatusCode)
             {
                 return await response.Content.ReadFromJsonAsync<UserResponse>();

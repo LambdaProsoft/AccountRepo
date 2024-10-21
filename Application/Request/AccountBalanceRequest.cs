@@ -8,6 +8,7 @@ namespace Application.Request
 {
     public class AccountBalanceRequest
     {
+        public bool Option { get; set; } 
         public decimal Balance {  get; set; }
     }
 }

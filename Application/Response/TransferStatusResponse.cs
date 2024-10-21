@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace Application.Response
 {
-    public class TransferProcess
+    public class TransferStatusResponse
     {
-        public bool TransferCompleted { get; set; }
-        public decimal CurrentBalance { get; set; }
+        public int Id { get; set; }
+        public string Status { get; set; }
     }
 }

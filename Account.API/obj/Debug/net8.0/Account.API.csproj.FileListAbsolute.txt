@@ -578,3 +578,4 @@ C:\Users\Noxie\Source\Repos\AccountRepo\Account.API\obj\Debug\net8.0\refint\Acco
 C:\Users\Noxie\Source\Repos\AccountRepo\Account.API\obj\Debug\net8.0\Account.API.pdb
 C:\Users\Noxie\Source\Repos\AccountRepo\Account.API\obj\Debug\net8.0\Account.API.genruntimeconfig.cache
 C:\Users\Noxie\Source\Repos\AccountRepo\Account.API\obj\Debug\net8.0\ref\Account.API.dll
+C:\Users\gonza\Desktop\PS- Proyecto\SRC\VirtualWallet-preview\AccountRepo\Account.API\bin\Debug\net8.0\Serilog.Extensions.Logging.dll

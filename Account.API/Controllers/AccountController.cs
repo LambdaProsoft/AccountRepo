@@ -57,7 +57,7 @@ namespace Account.API.Controllers
         /// </summary>
         /// <param name="id">El ID de la cuenta</param>
         /// <returns>La información de la cuenta solicitada, junto con el usuario y transferencias</returns>
-        [HttpGet]
+        [HttpGet("{id}")]
         [ProducesResponseType(typeof(AccountDetailsResponse), 200)]
         [ProducesResponseType(404)]
         public async Task<IActionResult> GetAccountById(Guid id)
@@ -94,7 +94,7 @@ namespace Account.API.Controllers
         /// <param name="accountRequest">Objeto de solicitud que contiene la información para actualizar una cuenta</param>
         /// <returns>La cuenta con los datos modificados</returns>
 
-        [HttpPut("Update")]
+        [HttpPatch("Update")]
         [ProducesResponseType(typeof(AccountResponse), 200)]
         [ProducesResponseType(400)]
         public async Task<IActionResult> UpdateAccount(Guid accountId, [FromBody] AccountUpdateRequest accountRequest)
@@ -129,10 +129,11 @@ namespace Account.API.Controllers
             }
 
         }
-        [HttpPut("Update/Balance")]
+
+        [HttpPatch("Update/Balance/{accountId}")]
         [ProducesResponseType(typeof(TransferProcess), 200)]
         [ProducesResponseType(404)]
-        public async Task<IActionResult> UpdateBalancee(Guid accountId, AccountBalanceRequest balance)
+        public async Task<IActionResult> UpdateBalancee(Guid accountId, [FromBody] AccountBalanceRequest balance)
         {
             _logger.LogInformation("Update account balance {Time}", DateTime.UtcNow);
 
@@ -171,8 +172,8 @@ namespace Account.API.Controllers
         /// </summary>
         /// <param name="userId">El ID de un usuario</param>
         /// <returns>La información de la cuenta solicitada, junto con el usuario y transferencias</returns>
-        [HttpGet("{userId}")]
-        [ProducesResponseType(typeof(AccountDetailsResponse), 200)]
+        [HttpGet("User/{userId}")]
+        [ProducesResponseType(typeof(AccountResponse), 200)]
         [ProducesResponseType(404)]
         public async Task<IActionResult> GetAccountByUserId(int userId)
         {

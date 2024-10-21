@@ -183,16 +183,16 @@ namespace Application.UseCases
 
         public async Task<AccountDetailsResponse> GetById(Guid id)
         {
+            //Con GetById retorna toda la info
+
             var account = await _accountQuery.GetAccountById(id);
 
-            // Verificar si funciona con los MS completos
             var user = await _userHttpService.GetUserById(account.UserId)
                 ?? throw new InvalidOperationException("Users not found");
 
-            //var transfers = await _transferHttpService.GetAllTransfersByAccount(account.AccountId)
-            //    ?? throw new InvalidOperationException("Transfers not found");
+            var transfers = await _transferHttpService.GetAllTransfersByAccount(account.AccountId)
+                ?? throw new InvalidOperationException("Transfers not found");
 
-            var transfers = _transferHttpService.GetAllTransfersByAccount(account.AccountId);
 
             var response = new AccountDetailsResponse
             {
@@ -231,19 +231,19 @@ namespace Application.UseCases
                 _logger.LogInformation("account alias {Time}", DateTime.UtcNow);
             }
 
-            if (accountRequest.Currency.HasValue)
+            if ((accountRequest.Currency.HasValue) && (accountRequest.Currency.Value > 0))
             {
                 account.CurrencyId = accountRequest.Currency.Value;
                 _logger.LogInformation("acount currency {Time}", DateTime.UtcNow);
             }
 
-            if (accountRequest.State.HasValue)
+            if ((accountRequest.State.HasValue) && (accountRequest.State.Value > 0))
             {
                 account.StateId = accountRequest.State.Value;
                 _logger.LogInformation("account state {Time}", DateTime.UtcNow);
             }
 
-            if (accountRequest.AccountType.HasValue)
+            if ((accountRequest.AccountType.HasValue) && (accountRequest.AccountType.Value > 0))
             {
                 account.AccTypeId = accountRequest.AccountType.Value;
                 _logger.LogInformation("account type {Time}", DateTime.UtcNow);
@@ -312,16 +312,28 @@ namespace Application.UseCases
             else
             {
                 _logger.LogInformation("Updating balance account {Time}", DateTime.UtcNow);
-                await _accountCommand.UpdateBalance(id, balance.Balance);
-                return new TransferProcess
+
+                if (balance.Option) //Si la opcion es true, suma el balance
                 {
-                    TransferCompleted = true,
-                };
+                    account.Balance += balance.Balance;
+                    await _accountCommand.UpdateAccount(account); 
+
+                    return new TransferProcess { TransferCompleted = true, CurrentBalance = account.Balance };
+                }
+
+                // Si es falso, resta el balance
+                account.Balance -= balance.Balance;
+                await _accountCommand.UpdateAccount(account);
+
+                return new TransferProcess { TransferCompleted = true, CurrentBalance = account.Balance };
+
             }
         }
         
-        public async Task<AccountDetailsResponse> GetByUserId(int userId)
+        public async Task<AccountResponse> GetByUserId(int userId)
         {
+            //Con getByUserId retorna lo escencial
+
             //verifica que el usuario tenga una cuenta
             _logger.LogInformation("Cheking if user already exist {Time}", DateTime.UtcNow);
 
@@ -334,31 +346,16 @@ namespace Application.UseCases
 
             _logger.LogInformation("Searching account {Time}", DateTime.UtcNow);
 
-            var user = await _userHttpService.GetUserById(userId)
-                ?? throw new ExceptionNotFound("Users not found");
-
-            //var transfers = await _transferHttpService.GetAllTransfersByAccount(account.AccountId)
-            //    ?? throw new ExceptionNotFound("Transfers not found");
-
-            var transfers = _transferHttpService.GetAllTransfersByAccount(account.AccountId);
-
-            var response = new AccountDetailsResponse
+            var response = new AccountResponse
             {
-                Account = new AccountResponse
-                {
-                    AccountId = account.AccountId,
-                    CBU = account.CBU,
-                    Alias = account.Alias,
-                    NumeroDeCuenta = account.NumberAccount,
-                    Balance = account.Balance,
-                    TipoDeCuenta = _accountTypeServices.GetById(account.AccTypeId).Result.Name,
-                    TipoDeMoneda = _typeCurrencyServices.GetById(account.CurrencyId).Result.Name,
-                    EstadoDeLaCuenta = _stateAccountServices.GetById(account.StateId).Result.Name
-                },
-
-                // Suponiendo que los responses sean iguales
-                User = user,
-                Transfers = transfers
+                AccountId = account.AccountId,
+                CBU = account.CBU,
+                Alias = account.Alias,
+                NumeroDeCuenta = account.NumberAccount,
+                Balance = account.Balance,
+                TipoDeCuenta = _accountTypeServices.GetById(account.AccTypeId).Result.Name,
+                TipoDeMoneda = _typeCurrencyServices.GetById(account.CurrencyId).Result.Name,
+                EstadoDeLaCuenta = _stateAccountServices.GetById(account.StateId).Result.Name
             };
 
             return response;
