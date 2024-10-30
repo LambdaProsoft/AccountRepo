@@ -1,8 +1,12 @@
 ﻿using Application.Interfaces.IAccountModel;
 using Application.Request;
 using Application.Response;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using System.Security.Cryptography.Xml;
+using System.Security.Claims;
+using System.Text;
+using System.IdentityModel.Tokens.Jwt;
 
 namespace Account.API.Controllers
 {
@@ -27,7 +31,8 @@ namespace Account.API.Controllers
         [HttpPost]
         [ProducesResponseType(typeof(AccountResponse), 201)]
         [ProducesResponseType(400)]
-        public async Task<IActionResult> CreateAccount([FromBody] AccountCreateRequest accountRequest)
+        [Authorize]
+        public async Task<IActionResult> CreateAccount ([FromHeader] string authorization, [FromBody] AccountCreateRequest accountRequest)
         {
             _logger.LogInformation("Create account {Time}", DateTime.UtcNow);
 
@@ -36,10 +41,23 @@ namespace Account.API.Controllers
                 _logger.LogWarning("Create account/bad request {Time}", DateTime.UtcNow);
                 return BadRequest(ModelState);
             }
+            
+            if (string.IsNullOrEmpty(authorization))
+            {
+                return Unauthorized("Token is required");
+            }
+
+            // Obtiene el userId desde los claims
+            var userId = User.Claims.FirstOrDefault(x => x.Type == "http://schemas.xmlsoap.org/ws/2005/05/identity/claims/nameidentifier")?.Value;
+
+            if (userId == null)
+            {
+                return Unauthorized("No se pudo obtener el Id de usuario desde el token");
+            }
 
             try
             {
-                var accountResponse = await _accountServices.CreateAccount(accountRequest);
+                var accountResponse = await _accountServices.CreateAccount(int.Parse(userId), accountRequest);
 
                 _logger.LogInformation("Account created {Time}", DateTime.UtcNow);
 
@@ -58,7 +76,7 @@ namespace Account.API.Controllers
         /// <param name="id">El ID de la cuenta</param>
         /// <returns>La información de la cuenta solicitada, junto con el usuario y transferencias</returns>
         [HttpGet("{id}")]
-        [ProducesResponseType(typeof(AccountDetailsResponse), 200)]
+        [ProducesResponseType(typeof(AccountResponse), 200)]
         [ProducesResponseType(404)]
         public async Task<IActionResult> GetAccountById(Guid id)
         {
@@ -125,7 +143,7 @@ namespace Account.API.Controllers
             catch (Exception ex)
             {
                 _logger.LogInformation("Exception 500 {Time}", DateTime.UtcNow);
-                return StatusCode(500, new { Message = ex.Message });
+                return StatusCode(400, new { Message = ex.Message });
             }
 
         }

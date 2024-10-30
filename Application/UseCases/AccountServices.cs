@@ -47,7 +47,7 @@ namespace Application.UseCases
             _random = new Random();
         }
 
-        public async Task<AccountResponse> CreateAccount(AccountCreateRequest accountRequest)
+        public async Task<AccountResponse> CreateAccount(int userId, AccountCreateRequest accountRequest)
         {
             //verifica si ya existe una cuenta con ese usuario
             if (await _accountQuery.UserExists(accountRequest.User))
@@ -56,8 +56,6 @@ namespace Application.UseCases
 
                 throw new Conflict("This user already have an account");
             }
-
-            //Asignar el tipo de moneda por pais?
 
             string accountNumber = await GenerateAccountNumber();
 
@@ -73,7 +71,7 @@ namespace Application.UseCases
                 Alias = alias,
                 NumberAccount = accountNumber,
                 Balance = 10000,  // Arranca con plata en 0 a menos definamos promos (sugerencia lucas)
-                UserId = accountRequest.User,
+                UserId = userId,
                 AccTypeId = accountRequest.AccountType,
                 CurrencyId = accountRequest.Currency,
                 StateId = 1 //Por defecto la iniciamos activa
@@ -181,36 +179,20 @@ namespace Application.UseCases
             return alias;
         }
 
-        public async Task<AccountDetailsResponse> GetById(Guid id)
+        public async Task<AccountResponse> GetById(Guid id)
         {
-            //Con GetById retorna toda la info
-
             var account = await _accountQuery.GetAccountById(id);
 
-            var user = await _userHttpService.GetUserById(account.UserId)
-                ?? throw new InvalidOperationException("Users not found");
-
-            var transfers = await _transferHttpService.GetAllTransfersByAccount(account.AccountId)
-                ?? throw new InvalidOperationException("Transfers not found");
-
-
-            var response = new AccountDetailsResponse
+            var response = new AccountResponse
             {
-                Account = new AccountResponse
-                {
-                    AccountId = account.AccountId,
-                    CBU = account.CBU,
-                    Alias = account.Alias,
-                    NumeroDeCuenta = account.NumberAccount,
-                    Balance = account.Balance,
-                    TipoDeCuenta = _accountTypeServices.GetById(account.AccTypeId).Result.Name,
-                    TipoDeMoneda = _typeCurrencyServices.GetById(account.CurrencyId).Result.Name,
-                    EstadoDeLaCuenta = _stateAccountServices.GetById(account.StateId).Result.Name
-                },
-
-                // Suponiendo que los responses sean iguales
-                User = user,
-                Transfers = transfers
+                AccountId = account.AccountId,
+                CBU = account.CBU,
+                Alias = account.Alias,
+                NumeroDeCuenta = account.NumberAccount,
+                Balance = account.Balance,
+                TipoDeCuenta = _accountTypeServices.GetById(account.AccTypeId).Result.Name,
+                TipoDeMoneda = _typeCurrencyServices.GetById(account.CurrencyId).Result.Name,
+                EstadoDeLaCuenta = _stateAccountServices.GetById(account.StateId).Result.Name
             };
 
             return response;
@@ -227,6 +209,10 @@ namespace Application.UseCases
             // Actualiza los campos que no son nulos
             if (!string.IsNullOrWhiteSpace(accountRequest.Alias))
             {
+                if (!await _accountQuery.IsAliasUnique(accountRequest.Alias))
+                {
+                    throw new Conflict("This alias already exist.");
+                }
                 account.Alias = accountRequest.Alias;
                 _logger.LogInformation("account alias {Time}", DateTime.UtcNow);
             }
@@ -332,9 +318,6 @@ namespace Application.UseCases
         
         public async Task<AccountResponse> GetByUserId(int userId)
         {
-            //Con getByUserId retorna lo escencial
-
-            //verifica que el usuario tenga una cuenta
             _logger.LogInformation("Cheking if user already exist {Time}", DateTime.UtcNow);
 
             if (!await _accountQuery.UserExists(userId))

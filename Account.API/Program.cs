@@ -13,6 +13,11 @@ using Infrastructure.Command;
 using Microsoft.EntityFrameworkCore;
 using Application.Interfaces.IHttpServices;
 using Serilog;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
+using System.IdentityModel.Tokens.Jwt;
+using System.Text;
+using Microsoft.IdentityModel.Tokens;
+using Application.Interfaces;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -31,7 +36,33 @@ builder.Logging.AddSerilog();
 
 Log.Logger.Information("Starting the Web API...");
 
+
+// Configuracion de JWT
+var secretKey = builder.Configuration.GetValue<string>("Jwt:Key");
+
+builder.Services.AddAuthentication(options =>
+{
+    options.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
+    options.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
+})
+.AddJwtBearer(options =>
+{
+    options.RequireHttpsMetadata = false;
+    options.SaveToken = true;
+    options.TokenValidationParameters = new TokenValidationParameters
+    {
+        ValidateIssuerSigningKey = true,
+        IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(secretKey)),
+        ValidateIssuer = false,
+        ValidateAudience = false,
+        ValidIssuer = builder.Configuration["Jwt:Issuer"], // Leer desde appsettings.json
+        ValidAudience = builder.Configuration["Jwt:Audience"] // Leer desde appsettings.json
+    };
+});
+builder.Services.AddAuthorization();
+
 //config
+
 builder.Services.AddHttpClient<IUserHttpService, UserHttpService>(client =>
 {
     client.BaseAddress = new Uri("https://localhost");
@@ -64,6 +95,16 @@ builder.Services.AddScoped<IStateAccountServices, StateAccountServices>();
 builder.Services.AddScoped<ITypeCurrencyQuery, TypeCurrencyQuery>();
 builder.Services.AddScoped<ITypeCurrencyServices, TypeCurrencyServices>();
 
+builder.Services.AddScoped<IJwtService, JwtService>(provider =>
+{
+    var config = provider.GetRequiredService<IConfiguration>();
+    var key = config.GetValue<string>("Jwt:Key");
+    var accessTokenExpirationMinutes = config.GetValue<int>("Jwt:AccessTokenExpirationMinutes");
+    var refreshTokenExpirationDays = config.GetValue<int>("Jwt:RefreshTokenExpirationDays");
+
+    return new JwtService(key, accessTokenExpirationMinutes, refreshTokenExpirationDays);
+});
+
 builder.Services.AddCors(options =>
 {
     options.AddPolicy("AllowAll", builder =>
@@ -86,6 +127,9 @@ if (app.Environment.IsDevelopment())
     app.UseSwagger();
     app.UseSwaggerUI();
 }
+
+app.UseAuthentication();
+app.UseRouting();
 
 app.UseHttpsRedirection();
 
