@@ -197,7 +197,24 @@ namespace Application.UseCases
 
             return response;
         }
+        public async Task<AccountResponse> GetByAliasOrCBU(string searchParam)
+        {
+            var account = await _accountQuery.GetAccountByAliasOrCBU(searchParam);
 
+            var response = new AccountResponse
+            {
+                AccountId = account.AccountId,
+                CBU = account.CBU,
+                Alias = account.Alias,
+                NumeroDeCuenta = account.NumberAccount,
+                Balance = account.Balance,
+                TipoDeCuenta = _accountTypeServices.GetById(account.AccTypeId).Result.Name,
+                TipoDeMoneda = _typeCurrencyServices.GetById(account.CurrencyId).Result.Name,
+                EstadoDeLaCuenta = _stateAccountServices.GetById(account.StateId).Result.Name
+            };
+
+            return response;
+        }
         public async Task<AccountResponse> UpdateAccount(Guid id, AccountUpdateRequest accountRequest)
         {
             var account = await _accountQuery.GetAccountById(id);

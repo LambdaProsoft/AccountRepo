@@ -50,5 +50,11 @@ namespace AccountInfrastructure.Query
                 .FirstOrDefaultAsync(x => x.UserId == userId);
             return account;
         }
+        public async Task<AccountModel> GetAccountByAliasOrCBU(string searchParam)
+        {
+            var account = await _context.Account
+                .FirstOrDefaultAsync(x => x.Alias == searchParam || x.CBU == searchParam);
+            return account;
+        }
     }
 }

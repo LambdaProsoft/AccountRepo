@@ -105,6 +105,37 @@ namespace Account.API.Controllers
             }
         }
 
+
+        [HttpGet("{searchParam}/Alias")]
+        [ProducesResponseType(typeof(AccountResponse), 200)]
+        [ProducesResponseType(404)]
+        public async Task<IActionResult> GetAccountByAliasOrCBU(string searchParam)
+        {
+            _logger.LogInformation("Get account by id {Time}", DateTime.UtcNow);
+
+            try
+            {
+                var accountResponse = await _accountServices.GetByAliasOrCBU(searchParam);
+
+                if (accountResponse == null)
+                {
+                    _logger.LogInformation("Account not found {Time}", DateTime.UtcNow);
+
+                    return NotFound();
+                }
+
+                _logger.LogInformation("Account found {Time}", DateTime.UtcNow);
+
+                return Ok(accountResponse);
+            }
+            catch (Exception ex)
+            {
+                _logger.LogInformation("Exception 500 {Time}", DateTime.UtcNow);
+
+                return StatusCode(500, new { Message = ex.Message });
+            }
+        }
+
         /// <summary>
         /// Actualiza una cuenta por su Id y datos ingresados
         /// </summary>
