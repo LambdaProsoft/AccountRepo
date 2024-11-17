@@ -182,6 +182,10 @@ namespace Application.UseCases
         public async Task<AccountResponse> GetById(Guid id)
         {
             var account = await _accountQuery.GetAccountById(id);
+            if (account == null)
+            {
+                return null;
+            }
 
             var response = new AccountResponse
             {
