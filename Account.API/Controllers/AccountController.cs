@@ -7,6 +7,7 @@ using System.Security.Cryptography.Xml;
 using System.Security.Claims;
 using System.Text;
 using System.IdentityModel.Tokens.Jwt;
+using Application.Exceptions;
 
 namespace Account.API.Controllers
 {
@@ -111,7 +112,7 @@ namespace Account.API.Controllers
         [ProducesResponseType(404)]
         public async Task<IActionResult> GetAccountByAliasOrCBU(string searchParam)
         {
-            _logger.LogInformation("Get account by id {Time}", DateTime.UtcNow);
+            _logger.LogInformation("Get account by Alias {Time}", DateTime.UtcNow);
 
             try
             {
@@ -127,6 +128,10 @@ namespace Account.API.Controllers
                 _logger.LogInformation("Account found {Time}", DateTime.UtcNow);
 
                 return Ok(accountResponse);
+            }
+            catch (ExceptionNotFound ex)
+            {
+                return new JsonResult(new ApiError { Message = ex.Message }) { StatusCode = 404 }; ;
             }
             catch (Exception ex)
             {

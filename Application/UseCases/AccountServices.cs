@@ -198,13 +198,15 @@ namespace Application.UseCases
                 TipoDeMoneda = _typeCurrencyServices.GetById(account.CurrencyId).Result.Name,
                 EstadoDeLaCuenta = _stateAccountServices.GetById(account.StateId).Result.Name
             };
-
             return response;
         }
         public async Task<AccountResponse> GetByAliasOrCBU(string searchParam)
         {
             var account = await _accountQuery.GetAccountByAliasOrCBU(searchParam);
-
+            if (account == null)
+            {
+                throw new ExceptionNotFound("Destination Account does not exist");
+            }
             var response = new AccountResponse
             {
                 AccountId = account.AccountId,
@@ -216,7 +218,6 @@ namespace Application.UseCases
                 TipoDeMoneda = _typeCurrencyServices.GetById(account.CurrencyId).Result.Name,
                 EstadoDeLaCuenta = _stateAccountServices.GetById(account.StateId).Result.Name
             };
-
             return response;
         }
         public async Task<AccountResponse> UpdateAccount(Guid id, AccountUpdateRequest accountRequest)
@@ -361,7 +362,6 @@ namespace Application.UseCases
                 TipoDeMoneda = _typeCurrencyServices.GetById(account.CurrencyId).Result.Name,
                 EstadoDeLaCuenta = _stateAccountServices.GetById(account.StateId).Result.Name
             };
-
             return response;
         }
     }
